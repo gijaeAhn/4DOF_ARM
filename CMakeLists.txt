@@ -1,10 +1,14 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.20)
 
-# 프로젝트 정보
+
 project(
   4DOF_ARM
   VERSION 0.1
   LANGUAGES CXX)
+
+find_package(Python COMPONENTS Interpreter REQUIRED)
+
+set(CMAKE_TOOLCHAIN_FILE=$HOME/vcpkg/scripts/buildsystems/vcpkg.cmake)
 
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)

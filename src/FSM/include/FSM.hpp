@@ -4,7 +4,7 @@
 
 #include "FSM_utilities.hpp"
 #include "FSM_states.hpp"
-
+#include <map>
 namespace fsm {
 class FSM {
 private:

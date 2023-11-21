@@ -6,7 +6,7 @@
 #include <string>
 
 
-namespace {
+namespace fsm{
 struct Transition {
     fsm::State currentState;
     std::string event;

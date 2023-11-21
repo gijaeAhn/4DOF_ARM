@@ -11,6 +11,7 @@ endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_TOOLCHAIN_FILE=${HOME}/vcpkg/scripts/buildsystems/vcpkg.cmake)
 
 
 add_library(myactuator_rmd SHARED
@@ -19,6 +20,7 @@ add_library(myactuator_rmd SHARED
   src/protocol/requests.cpp
   src/protocol/responses.cpp
   src/driver.cpp
+  include/myactuator_rmd/motorInfo.hpp
 )
 set(MYACTUATOR_RMD_LIBRARIES "")
 target_link_libraries(myactuator_rmd ${MYACTUATOR_RMD_LIBRARIES})
@@ -31,12 +33,28 @@ target_compile_features(myactuator_rmd PRIVATE cxx_std_17)
 #   myactuator_rmd
 #   DESTINATION lib/${PROJECT_NAME}
 # )
-
+set (pybind11_DIR /home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11)
 find_package(Python COMPONENTS Interpreter Development)
-
 # Set pybind cmake directory
-set(pybind11_DIR /home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11)
 find_package(pybind11 REQUIRED )
+
+# if(NOT pybind11_FOUND)
+#   message(STATUS "pybind11 not found. Attempting to install via vcpkg")
+#   execute_process(
+#     COMMAND vcpkg install pybind11
+#     RESULT_VARIABLE VCPKG_RESULT
+#     OUTPUT_VARIABLE VCPKG_OUTPUT
+#   )
+#   if(VCPKG_RESULT EQUAL 0)
+#   message(STATUS "pybind11 successfully installed via vcpkg")
+#   find_package(pybind11 REQUIRED)
+#   else()
+#   message(FATAL_ERROR "Failed to install pybind11 via vcpkg. Error: ${VCPKG_OUTPUT}")
+#   endif()
+# endif()
+
+
+
 
 
 if(PYTHON_BINDINGS)

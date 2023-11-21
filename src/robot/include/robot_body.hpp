@@ -1,6 +1,7 @@
 #include "FSM.hpp"
 #include "robot_builder.hpp"
 #include "myactuator_rmd/driver.hpp"
+#include "myactuator_rmd/motorInfo.hpp"
 
 #include <unistd.h>
 #include <vector>
