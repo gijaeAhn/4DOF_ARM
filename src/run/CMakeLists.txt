@@ -13,7 +13,10 @@ find_package(Threads REQUIRED)
 
 
 #include header
-# include_directories(../Myactuator/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include
+                    ${myactuator_rmd_SOURCE_DIR}/include 
+                    ${FSM_SOURCE_DIR}/include
+                    ${robot_SOURCE_DIR}/include)
 
-add_executable(run_test src/test.cc)
-target_link_libraries(run_test myactuator_rmd Threads::Threads)
+add_executable(test src/test.cc)
+target_link_libraries(test robot )

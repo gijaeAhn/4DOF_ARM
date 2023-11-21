@@ -1,10 +1,16 @@
+#ifndef ROBOT_BODY
+#define ROBOT_BODY
+
+#pragma
+
+
 #include "FSM.hpp"
-#include "robot_builder.hpp"
 #include "myactuator_rmd/driver.hpp"
 #include "myactuator_rmd/motorInfo.hpp"
 
 #include <unistd.h>
 #include <vector>
+#include <utility>
 
 
 namespace robot {
@@ -41,7 +47,8 @@ using MotorList = std::vector<double>;
 
         public :
 
-        Robot();        
+        Robot();
+        Robot(Robot&& other) noexcept;       
         void addMotor(std::uint32_t actuator_id);
         void showCurrentState();
         void showCurrentJoint(); 
@@ -55,4 +62,8 @@ using MotorList = std::vector<double>;
 
         void actuateMotor(std::uint32_t actuator_id,float controlSignal);
     };
+
 }
+
+
+#endif

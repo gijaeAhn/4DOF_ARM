@@ -22,6 +22,7 @@ add_library(robot SHARED ${SRC_FILES})
 target_include_directories(robot PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${myactuator_rmd_SOURCE_DIR}/include ${FSM_SOURCE_DIR}/include)
 # target_compile_options(robot PRIVATE -Wall -Werror)
 target_compile_features(robot PRIVATE cxx_std_17)
+target_link_libraries(robot FSM myactuator_rmd)
 
 
 # # include(FetchContent)

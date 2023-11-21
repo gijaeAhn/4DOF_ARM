@@ -3,11 +3,22 @@
 
 
 
+
 namespace robot {
 
 
 
 Robot::Robot(){};
+
+Robot::Robot(Robot&& other) noexcept 
+    :driver_(std::exchange(other.driver_, nullptr)),
+     fsm_(std::move(other.fsm_)),
+     previousShaftAngle(std::move(other.previousShaftAngle)),
+     currentAngle(std::move(other.currentAngle)),
+     MotorList(std::move(other.MotorList))
+{
+
+}
 
 void Robot::addMotor(std::uint32_t actuator_id){
     driver_->addMotor(actuator_id);
