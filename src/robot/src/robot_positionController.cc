@@ -6,21 +6,19 @@
 namespace robot{
 
 
-        robotPositionController::robotPositionController(float pGain, float iGain,float dGain,) 
-        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain)
-        {   
-            setDriver(&driver);
-        }
+        robotPositionController::robotPositionController(float pGain, float iGain,float dGain,Robot* robot) 
+        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain), robot_(robot)
+        {   }
 
         robotPositionController::~robotPositionController()
         {}
 
         void robotPositionController::addMotor(std::uint32_t actuator_id)
         {
-            inner_driver__->addMotor(actuator_id);
-            inner_driver__->MotorRunning(actuator_id);
+            robot_->driver_->addMotor(actuator_id);
+            robot_->driver_->MotorRunning(actuator_id);
             std::cout << "Motor set" << std::endl;
-            myactuator_rmd::Feedback buf {inner_driver__->sendTorqueSetpoint(actuator_id,0)};
+            myactuator_rmd::Feedback buf {robot_->driver_->sendTorqueSetpoint(actuator_id,0)};
             std::cout << "Motor torque 0 set" << std::endl;
             previousShaftAngle.push_back(buf.shaft_angle);
             currentAngle.push_back(0);
@@ -146,7 +144,7 @@ namespace robot{
             myactuator_rmd::Feedback buf;
             // Clamping controlSignal to the range of -20.0 to 20.0
             float clampedSignal = std::max(-20.0f, std::min(controlSignal, 20.0f));
-            buf = inner_driver__->sendTorqueSetpoint(actuator_id, clampedSignal);
+            buf = robot_->driver_->sendTorqueSetpoint(actuator_id, clampedSignal);
             updateMotorPosition(actuator_id,buf);
         }
 };
