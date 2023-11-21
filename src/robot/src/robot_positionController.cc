@@ -1,13 +1,12 @@
-#include "myactuator_rmd/positioncontrol.hpp"
-
-std::mutex mtx;
-
-namespace myactuator_rmd{
+#include "robot/include/robot_positionController.hpp"
+#include "myactuator_rmd/motorInfo.hpp"
 
 
-        MotorPositionController::MotorPositionController(float pGain, float iGain,float dGain, const std::string& ifname) 
-        : currentAngle(0), proportionalGain(pGain),  derivativeGain(dGain),
-        integralGain(iGain), inner_driver_(new Driver(ifname) )
+namespace robot{
+
+
+        robotPositionController::robotPositionController(float pGain, float iGain,float dGain) 
+        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain)
         {   
             // inner_driver_->MotorRunning();
             // myactuator_rmd::Feedback buf;
@@ -15,12 +14,10 @@ namespace myactuator_rmd{
             // previousShaftAngle = buf.shaft_angle;
         }
 
-        MotorPositionController::~MotorPositionController()
-        {
-            delete inner_driver_;
-        }
+        robotPositionController::~robotPositionController()
+        {}
 
-        void MotorPositionController::addMotor(std::uint32_t actuator_id)
+        void robotPositionController::addMotor(std::uint32_t actuator_id)
         {
             inner_driver_->addMotor(actuator_id);
             inner_driver_->MotorRunning(actuator_id);
@@ -120,7 +117,7 @@ namespace myactuator_rmd{
         }
 
     
-        void MotorPositionController::updateMotorPosition(std::uint32_t actuator_id, Feedback feedback) 
+        void robotPositionController::updateMotorPosition(std::uint32_t actuator_id, Feedback feedback) 
         {
             int currentShaftAngle = feedback.shaft_angle;
             calculateCurrentAngle(actuator_id, currentShaftAngle);
@@ -129,8 +126,8 @@ namespace myactuator_rmd{
             mtx.unlock();
         }
 
-        void MotorPositionController::calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle)
-        {   
+        void robotPositionController::calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle)
+        {    
 
             float shaftChange =0;
             if (currentShaftAngle - previousShaftAngle[actuator_id-1] > 40000) {
@@ -151,7 +148,7 @@ namespace myactuator_rmd{
             showCurrentAngle(actuator_id);
         }
 
-        void MotorPositionController::actuateMotor(std::uint32_t actuator_id, float controlSignal) 
+        void robotPositionController::actuateMotor(std::uint32_t actuator_id, float controlSignal) 
         {   
             Feedback buf;
             // Clamping controlSignal to the range of -20.0 to 20.0

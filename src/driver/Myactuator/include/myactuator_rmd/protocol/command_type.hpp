@@ -1,10 +1,3 @@
-/**
- * \file command_type.hpp
- * \mainpage
- *    Contains enum for all supported command types
- * \author
- *    Tobit Flatscher (github.com/2b-t)
-*/
 
 #ifndef MYACTUATOR_RMD__PROTOCOL__COMMAND_TYPE
 #define MYACTUATOR_RMD__PROTOCOL__COMMAND_TYPE
@@ -15,10 +8,6 @@
 
 namespace myactuator_rmd {
 
-  /**\enum CommandType
-   * \brief
-   *    Strongly typed enum for all supported command types
-  */
   enum class CommandType: std::uint8_t {
     READ_PID_PARAMETERS = 0x30,
     WRITE_PID_PARAMETERS_TO_RAM = 0x31,

@@ -3,6 +3,7 @@
 #define FSM_BODY_H
 
 #include "FSM_utilities.hpp"
+#include "FSM_states.hpp"
 
 namespace fsm {
 class FSM {

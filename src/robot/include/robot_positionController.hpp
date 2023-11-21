@@ -1,35 +1,32 @@
 #include "myactuator_rmd/driver.hpp"
+#include "myactuator_rmd/actuator_state/feedback.hpp"
+
 #include <iostream>
 #include <vector>
 #include <unistd.h>
 #include <mutex>
 #include <chrono>
 #include <thread>
-namespace myactuator_rmd{
 
-class MotorPositionController {
+
+namespace robot{
+
+class robotPositionController {
     private :
-        const int oneShaftCycle = 40;
-        const int maxShaftAngle = 65535;
-        const int gearRatio = 9;
+        
         const float errorThreshold = 0.5;
-        
-        std::vector<int> previousShaftAngle;
-        std::vector<double> currentAngle;
-        
+                
         float proportionalGain;
         float integralGain;
         float derivativeGain;
 
-        Driver* inner_driver_;
-        std::mutex mtx_;
-
+        myactuator_rmd::Driver* inner_driver_;
 
     public:
 
-        MotorPositionController(float pGain, float iGain,float dGain, const std::string& ifname) ;
+        robotPositionController(float pGain, float iGain,float dGain, const std::string& ifname) ;
 
-        ~MotorPositionController();
+        ~robotPositionController();
 
         void addMotor(std::uint32_t actuator_id);
 
