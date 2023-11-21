@@ -1,0 +1,14 @@
+#ifndef FSM_STATES_H
+#define FSM_STATES_H
+
+namespace fsm {
+enum class State {
+    INIT_STATE,
+    MOTION_STATE,
+    IMPEDENCE_STATE
+    // Add more states as needed
+};
+
+}
+
+#endif // FSM_STATES_H
