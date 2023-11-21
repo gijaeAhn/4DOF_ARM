@@ -1,5 +1,6 @@
 #include "myactuator_rmd/driver.hpp"
 #include "myactuator_rmd/actuator_state/feedback.hpp"
+#include "robot_body.hpp"
 
 #include <iostream>
 #include <vector>
@@ -13,30 +14,34 @@ namespace robot{
 
 class robotPositionController {
     private :
+
+    Robot* robot_;
+
+    private :
         
-        const float errorThreshold = 0.5;
+        const float errorThreshold = 0.01;
                 
         float proportionalGain;
         float integralGain;
         float derivativeGain;
 
-        myactuator_rmd::Driver* inner_driver_;
+
+
+
+        
 
     public:
 
-        robotPositionController(float pGain, float iGain,float dGain, const std::string& ifname) ;
+        robotPositionController(float pGain, float iGain,float dGain,Robot* robot);
 
         ~robotPositionController();
 
-        void addMotor(std::uint32_t actuator_id);
-
-        void showCurrentAngle(std::uint32_t actuator_id);
 
         void PIDcontrol(std::vector<std::uint32_t> actuator_id, std::vector<double> setpoint, int maxIterations);
 
     protected:
     
-        void updateMotorPosition(std::uint32_t actuator_id, Feedback feedback);
+        void updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback);
       
         void calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle);
 

@@ -19,7 +19,6 @@ add_library(myactuator_rmd SHARED
   src/protocol/requests.cpp
   src/protocol/responses.cpp
   src/driver.cpp
-  src/positioncontrol.cc
 )
 set(MYACTUATOR_RMD_LIBRARIES "")
 target_link_libraries(myactuator_rmd ${MYACTUATOR_RMD_LIBRARIES})

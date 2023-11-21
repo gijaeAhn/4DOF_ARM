@@ -4,7 +4,7 @@
 
 #include <cstdint>
 
-namespace myactuator{
+namespace myactuator_rmd{
 
 const int oneShaftCycle = 40;
 const int maxShaftAngle = 65535;

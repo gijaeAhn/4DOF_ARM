@@ -1,14 +1,14 @@
-#include "FSM_body.hpp"
+#include "FSM.hpp"
 
 
 namespace fsm{
 FSM::FSM() {
     // Initialize the FSM with a starting state
-    currentState = State:
+    State state_;
 
     // Define state transitions
-    transitions[TransitionKey{State::State1, "EventA"}] = State::State2;
-    transitions[TransitionKey{State::State2, "EventB"}] = State::State3;
+    transitions[TransitionKey{State::INIT_STATE, "EventA"}] = State::MOTION_STATE;
+    transitions[TransitionKey{State::INIT_STATE, "EventB"}] = State::IMPEDENCE_STATE;
     // Add more transitions as necessary
 }
 

@@ -1,8 +1,6 @@
-#include "FSM_body.hpp"
+#include "FSM.hpp"
 #include "robot_builder.hpp"
-#include "robot_positionController.hpp"
-#include "robot_run.hpp"
-#include "robot_state.hpp"
+
 
 #include <vector>
 
@@ -21,14 +19,12 @@ using MotorList = std::vector<double>;
         
         JointStates jointStates_;
         fsm::FSM fsm_;
-        MotorList motorList_;
-        myactuator_rmd::Driver* driver_;
         
-        
+        std::vector<int> previousShaftAngle;
+        std::vector<double> currentAngle;
+        std::vector<int> MotorList;
 
         
-
-        robotPositionController Pcontroller_;
 
 
         void robotInit();

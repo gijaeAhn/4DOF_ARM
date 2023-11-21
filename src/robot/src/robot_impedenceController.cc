@@ -33,7 +33,7 @@ class robotImpedenceController {
 
     protected:
     
-        void updateMotorPosition(std::uint32_t actuator_id, Feedback feedback);
+        void updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback);
       
         void calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle);
 

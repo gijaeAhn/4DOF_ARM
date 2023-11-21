@@ -4,4 +4,5 @@ set (CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(driver)
 add_subdirectory(FSM)
+add_subdirectory(robot)
 add_subdirectory(run)
