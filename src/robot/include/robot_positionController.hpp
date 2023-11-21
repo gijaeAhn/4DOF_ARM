@@ -15,9 +15,9 @@ namespace robot{
 class robotPositionController {
     private :
 
-    Robot* robot_;
+        Robot* robot_;
 
-    private :
+   
         
         const float errorThreshold = 0.01;
                 
@@ -39,13 +39,9 @@ class robotPositionController {
 
         void PIDcontrol(std::vector<std::uint32_t> actuator_id, std::vector<double> setpoint, int maxIterations);
 
-    protected:
-    
-        void updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback);
-      
-        void calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle);
 
-        void actuateMotor(std::uint32_t actuator_id,float controlSignal);
+    
+        
 };
 
 

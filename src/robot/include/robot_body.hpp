@@ -1,8 +1,10 @@
 #include "FSM.hpp"
 #include "robot_builder.hpp"
+#include "myactuator_rmd/driver.hpp"
 
-
+#include <unistd.h>
 #include <vector>
+
 
 namespace robot {
 
@@ -14,7 +16,7 @@ using MotorList = std::vector<double>;
 
 
     class Robot {
-
+        friend class robotPositionController;
         protected :
         
         JointStates jointStates_;
@@ -28,23 +30,28 @@ using MotorList = std::vector<double>;
         std::vector<double> currentAngle;
         
 
-        
-        void addMotor(std::uint32_t actuator_id);
+        myactuator_rmd::Driver* driver_;
 
-        void robotInit();
+        
+
+      
         
 
 
         public :
 
-        myactuator_rmd::Driver* driver_;
-        
+        Robot();        
+        void addMotor(std::uint32_t actuator_id);
         void showCurrentState();
         void showCurrentJoint(); 
-        void movePosition(std::vector<double> position);
-        void activateImpedence();
         void setJoint(std::vector<double> joint);
         void setMotor(std::vector<int> motor);
-        void setDriver(myactuator_rmd::Driver &driver);
-    }
-};
+        void setDriver(myactuator_rmd::Driver* driver);
+
+        void updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback);
+      
+        void calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle);
+
+        void actuateMotor(std::uint32_t actuator_id,float controlSignal);
+    };
+}
