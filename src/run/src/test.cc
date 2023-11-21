@@ -1,13 +1,14 @@
-#include "myactuator_rmd/driver.hpp"
+
 #include <iostream>
 #include <string>
 #include <unistd.h>
 #include <chrono>
-#include "myactuator_rmd/positioncontrol.hpp"
 #include <pthread.h>
 #include <thread>
 
 
+#include "myactuator_rmd/positioncontrol.hpp"
+#include "myactuator_rmd/driver.hpp"
 
 
 

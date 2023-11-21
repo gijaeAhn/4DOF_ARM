@@ -12,17 +12,6 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# find_package(ament_cmake)
-# if(ament_cmake_FOUND)
-#   message(STATUS "Ament CMake detected.")
-# else()
-#   message(WARNING "Ament CMake not found!")
-# endif()
-# include(ConfigExtras.cmake)
-
-include_directories(
-  include/
-)
 
 add_library(myactuator_rmd SHARED
   src/can/node.cpp
@@ -34,11 +23,19 @@ add_library(myactuator_rmd SHARED
 )
 set(MYACTUATOR_RMD_LIBRARIES "")
 target_link_libraries(myactuator_rmd ${MYACTUATOR_RMD_LIBRARIES})
-install(TARGETS
-  myactuator_rmd
-  DESTINATION lib/${PROJECT_NAME}
-)
+target_include_directories(myactuator_rmd PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+# target_compile_options(myactuator_rmd PRIVATE -Wall -Werror)
+target_compile_features(myactuator_rmd PRIVATE cxx_std_17)
+
+
+# install(TARGETS
+#   myactuator_rmd
+#   DESTINATION lib/${PROJECT_NAME}
+# )
+
 find_package(Python COMPONENTS Interpreter Development)
+
+# Set pybind cmake directory
 set(pybind11_DIR /home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11)
 find_package(pybind11 REQUIRED )
 
@@ -48,10 +45,10 @@ if(PYTHON_BINDINGS)
   target_link_libraries(pymyactuator_rmd PRIVATE myactuator_rmd)
   set_target_properties(pymyactuator_rmd PROPERTIES OUTPUT_NAME myactuator_rmd)
   
-  install(TARGETS
-    pymyactuator_rmd
-    DESTINATION lib/${PROJECT_NAME}
-  )
+  # install(TARGETS
+  #   pymyactuator_rmd
+  #   DESTINATION lib/${PROJECT_NAME}
+  # )
 endif()
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
