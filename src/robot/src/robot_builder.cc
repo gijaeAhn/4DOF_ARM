@@ -1,6 +1,6 @@
 #ifndef ROBOT_BUILDER
 #define ROBOT_BUILDER
-#pragma once
+
 
 
 #include "robot_builder.hpp"

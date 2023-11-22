@@ -17,7 +17,7 @@ namespace robot{
 
 
 
-        void robotPositionController::PIDcontrol(std::vector<std::uint32_t> actuator_id, std::vector<double> setpoint, int maxIterations)
+        void robotPositionController::PIDcontrol(std::vector<int> actuator_id, std::vector<double> setpoint, int maxIterations)
         {
             int iteration = 0;
    
