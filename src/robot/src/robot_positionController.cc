@@ -100,6 +100,9 @@ namespace robot{
 
         }
 
+    void robotPositionController::singleMotorControl(Motor motor){
+        
+    }
     
         
 };

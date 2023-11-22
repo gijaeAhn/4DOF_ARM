@@ -39,6 +39,8 @@ class robotPositionController {
 
         void PIDcontrol(std::vector<std::uint32_t> actuator_id, std::vector<double> setpoint, int maxIterations);
 
+        void singleMotorControl(Motor motor);
+
 
     
         

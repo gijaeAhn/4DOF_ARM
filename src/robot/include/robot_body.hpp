@@ -3,6 +3,7 @@
 
 #pragma
 
+#include "robot_motor.hpp"
 
 #include "FSM.hpp"
 #include "myactuator_rmd/driver.hpp"
@@ -31,7 +32,7 @@ using MotorList = std::vector<double>;
         
         
         
-        std::vector<std::uint32_t> MotorList;
+        std::vector<Motor> MotorList;
 
         std::vector<int> previousShaftAngle;
         std::vector<double> currentAngle;
