@@ -20,8 +20,19 @@ Robot::Robot(Robot&& other) noexcept
 
 }
 
-void Robot::addMotor(std::uint32_t actuator_id){
-    driver_->addMotor(actuator_id);
+void Robot::showCurrentJoint(){
+    printf("\033[0;31m");
+    printf(" Current Joint Angle :");
+    for(auto joint : currentAngle){
+        printf("%f ",joint );
+    }
+    printf("\n");
+    printf("\033[0m");
+}
+
+void Robot::addMotorR(std::uint32_t actuator_id){
+
+    driver_->addMotor(actuator_id);    
     driver_->MotorRunning(actuator_id);
     std::cout << "Motor set" << std::endl;
     myactuator_rmd::Feedback buf {driver_->sendTorqueSetpoint(actuator_id,0)};
@@ -35,11 +46,14 @@ void Robot::addMotor(std::uint32_t actuator_id){
 void Robot::setJoint(std::vector<double> joint)
     {currentAngle = joint;}
 
-void Robot::setMotor(std::vector<int> motor){
+void Robot::setMotor(std::vector<uint32_t> motor){
     MotorList = motor;
+
     for(int i =0; i<motor.size(); i++){
-        addMotor(MotorList[i]);
+        addMotorR(motor[i]);
     }
+    std::cout << "Debug 5" << std::endl;
+
 }
 
 void Robot::setDriver(myactuator_rmd::Driver* driver)
@@ -60,11 +74,9 @@ void Robot::calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAng
 
             float shaftChange =0;
             if (currentShaftAngle - previousShaftAngle[actuator_id-1] > 40000) {
-                // carry += (currentShaftAngle < previousShaftAngle) ? 1 : -1;
                 shaftChange = -((myactuator_rmd::maxShaftAngle - currentShaftAngle) + previousShaftAngle[actuator_id-1]);
             }
             if (currentShaftAngle - previousShaftAngle[actuator_id-1] < -40000) {
-                // carry += (currentShaftAngle < previousShaftAngle) ? 1 : -1;
                 shaftChange = currentShaftAngle + (myactuator_rmd::maxShaftAngle - previousShaftAngle[actuator_id-1]);
             }
             else

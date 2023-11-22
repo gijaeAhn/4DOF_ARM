@@ -31,7 +31,7 @@ using MotorList = std::vector<double>;
         
         
         
-        std::vector<int> MotorList;
+        std::vector<std::uint32_t> MotorList;
 
         std::vector<int> previousShaftAngle;
         std::vector<double> currentAngle;
@@ -49,11 +49,11 @@ using MotorList = std::vector<double>;
 
         Robot();
         Robot(Robot&& other) noexcept;       
-        void addMotor(std::uint32_t actuator_id);
+        void addMotorR(std::uint32_t actuator_id);
         void showCurrentState();
         void showCurrentJoint(); 
         void setJoint(std::vector<double> joint);
-        void setMotor(std::vector<int> motor);
+        void setMotor(std::vector<std::uint32_t> motor);
         void setDriver(myactuator_rmd::Driver* driver);
 
         void updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback);

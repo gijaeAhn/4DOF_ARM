@@ -11,7 +11,7 @@ namespace robot {
 
 RobotBuilder::RobotBuilder(){}
 
-RobotBuilder& RobotBuilder::buildJoint(std::vector<int> motor){
+RobotBuilder& RobotBuilder::buildJoint(std::vector<uint32_t> motor){
     robot_.setMotor(motor);
     return *this;
 }

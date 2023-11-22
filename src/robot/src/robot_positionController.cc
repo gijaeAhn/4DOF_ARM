@@ -17,7 +17,7 @@ namespace robot{
 
 
 
-        void robotPositionController::PIDcontrol(std::vector<int> actuator_id, std::vector<double> setpoint, int maxIterations)
+        void robotPositionController::PIDcontrol(std::vector<std::uint32_t> actuator_id, std::vector<double> setpoint, int maxIterations)
         {
             int iteration = 0;
    
@@ -56,7 +56,7 @@ namespace robot{
                 for(size_t i =0; i< dimension; ++i){
 
                 controlSignal[i] = proportionalGain * error[i] + integralGain * integralError[i] + derivativeGain * derivativeError[i];
-                std::cout << "Signal " << i << " " << controlSignal[i] << std::endl;
+                std::cout << "Signal " << i+1 << " " << controlSignal[i] << std::endl;
                 if(error[i]<errorThreshold) controlSignal[i] = 0;
                 robot_->actuateMotor(actuator_id[i], controlSignal[i]);
 
@@ -69,7 +69,7 @@ namespace robot{
                 
                 if(error[i]<errorThreshold) controlSignal[i] = 0;
                 robot_->actuateMotor(actuator_id[i], controlSignal[i]);
-                std::this_thread::sleep_for(std::chrono::milliseconds(5));
+                // std::this_thread::sleep_for(std::chrono::milliseconds(5));
 
 
                 }
@@ -84,16 +84,18 @@ namespace robot{
                
                 iteration++;
 
+                robot_->showCurrentJoint();
+
                 // Display Frequency
-                // if(iteration >200)
-                // {
-                //     end_freq = std::chrono::high_resolution_clock::now();
-                //     std::chrono::duration<double> duration = end_freq - start_freq;
-                //     auto seconds =duration.count();
-                //     std::cout << " Frequency : " << iteration/seconds << " Angle : " << currentAngle[actuator_id]<< std::endl;
-                //     iteration = 0;
-                //     start_freq = std::chrono::high_resolution_clock::now();
-                // }
+                if(iteration >20)
+                {
+                    end_freq = std::chrono::high_resolution_clock::now();
+                    std::chrono::duration<double> duration = end_freq - start_freq;
+                    auto seconds =duration.count();
+                    std::cout << " Frequency : " << iteration/seconds <<  std::endl;
+                    iteration = 0;
+                    start_freq = std::chrono::high_resolution_clock::now();
+                }
             } while ((controlSignal[0]!=0)||(controlSignal[1]!=0));
 
         }

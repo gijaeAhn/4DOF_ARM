@@ -20,6 +20,7 @@
 #include "myactuator_rmd/can/node.hpp"
 #include "myactuator_rmd/protocol/message.hpp"
 #include "myactuator_rmd/exceptions.hpp"
+#include "myactuator_rmd/protocol/address_offset.hpp"
 
 
 
@@ -49,6 +50,7 @@ namespace myactuator_rmd {
       Node& operator = (Node const&) = default;
       Node(Node&&) = default;
       Node& operator = (Node&&) = default;
+      ~Node();
 
       /**\fn updateIds
        * \brief
@@ -100,14 +102,19 @@ namespace myactuator_rmd {
     return;
   }
 
+  template <std::uint32_t SEND_ID_OFFSET, std::uint32_t RECEIVE_ID_OFFSET>
+  Node<SEND_ID_OFFSET,RECEIVE_ID_OFFSET>::~Node()
+  {std::cout << "Deconstruction of node" << std::endl;}
+
+
 
   template <std::uint32_t SEND_ID_OFFSET, std::uint32_t RECEIVE_ID_OFFSET>
   void Node<SEND_ID_OFFSET,RECEIVE_ID_OFFSET>::updateIds(std::uint32_t const actuator_id) {
     if ((actuator_id < 1) || (actuator_id > 32)) {
       throw Exception("Given actuator id '" + std::to_string(actuator_id) + "' out of admittable range [1, 32]!");
     }
-    actuator_id_.push_back(actuator_id);
 
+    actuator_id_.push_back(actuator_id);
     can_send_id_.push_back(SEND_ID_OFFSET + actuator_id_[actuator_id -1]) ;
     can_receive_id_.push_back(RECEIVE_ID_OFFSET + actuator_id_[actuator_id -1]);
     setRecvFilter(can_receive_id_[actuator_id -1]);
@@ -116,9 +123,9 @@ namespace myactuator_rmd {
 
   template <std::uint32_t SEND_ID_OFFSET, std::uint32_t RECEIVE_ID_OFFSET>
   void Node<SEND_ID_OFFSET,RECEIVE_ID_OFFSET>::send(std::uint32_t const actuator_id, Message const& msg) {
-    mtx.lock();
+    // mtx.lock();
     write(can_send_id_[actuator_id-1], msg.getData());
-    mtx.unlock();
+    // mtx.unlock();
     return;
   }
 

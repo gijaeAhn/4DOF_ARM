@@ -19,19 +19,23 @@ int main()
 {
     std::string ifname = "can0";
     myactuator_rmd::Driver driver(ifname);
-    std::vector<int> motor = {1,2};
+    std::vector<std::uint32_t> motor = {1,2};
     robot::RobotBuilder test_builder;
-    
+    std::vector<std::uint32_t> motor_id = {1,2};
 
-    robot::Robot test_robot(test_builder.buildJoint(motor)
+    robot::Robot test_robot(test_builder
                               .buildSystem(&driver)
+                              .buildJoint(motor)
                               .build());
 
 
-    robot::robotPositionController test_posControl(0.001,0.0001,0.000, &test_robot);
+
+    robot::robotPositionController test_posControl(0.000001,0.00005,-0.00001, &test_robot);
+
+
 
     std::vector<double> setpoint = {180,180};
-    test_posControl.PIDcontrol(motor, setpoint,10000);
+    test_posControl.PIDcontrol(motor_id, setpoint,10000);
     
 
 }
