@@ -24,6 +24,7 @@ class robotPositionController {
         float proportionalGain;
         float integralGain;
         float derivativeGain;
+        
 
 
         
@@ -39,7 +40,7 @@ class robotPositionController {
 
         void PIDcontrol(std::vector<std::uint32_t> actuator_id, std::vector<double> setpoint, int maxIterations);
 
-        void singleMotorControl(Motor motor);
+        void singleMotorControl(Motor motor, double setpoint);
 
 
     

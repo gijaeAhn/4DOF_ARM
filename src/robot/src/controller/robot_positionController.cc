@@ -1,5 +1,8 @@
 #include "robot_positionController.hpp"
 #include "myactuator_rmd/motorInfo.hpp"
+#include "stuffs/error.hpp"
+#include "stuffs/timer.hpp"
+#include "stuffs/motor.hpp"
 
 
 
@@ -100,11 +103,41 @@ namespace robot{
 
         }
 
-    void robotPositionController::singleMotorControl(Motor motor){
-        
+    void robotPositionController::singleMotorControl(Motor motor, double setpoint){
+            int iteration = 0;
+            double controlSignal =0;
+
+            
+            PID_ERROR pid_error(0,0,0,0);
+            Timer pid_timer;    
+            pid_timer.start();
+            pid_timer.stop();
+            pid_timer.next_execution = std::chrono::steady_clock::now();
+
+            do{ 
+                pid_timer.wait();
+
+                double buf_error = setpoint - robot_->currentAngle[motor.motor_id]-1;
+                pid_error.previousError_ = pid_error.error_;
+                pid_error.setError(buf_error ,buf_error, (buf_error - pid_error.previousError_)/pid_timer.dt_);
+
+                if(pid_error.error_ < errorThreshold){
+                    controlSignal =0;
+                }
+                else{
+                controlSignal = proportionalGain * pid_error.error_ + integralGain * pid_error.integralError_ + derivativeGain * pid_error.derivativeError_;
+                }
+                
+                std::this_thread::sleep_until(pid_timer.next_execution);
+                robot_->actuateMotor(motor.motor_id,controlSignal);
+                robot_->showCurrentJoint();
+                iteration++;
+            }while((controlSignal ==0));
+
+
     }
     
         
-};
+}
 
 

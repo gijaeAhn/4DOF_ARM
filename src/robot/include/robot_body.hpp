@@ -2,8 +2,7 @@
 #define ROBOT_BODY
 
 #pragma
-
-#include "robot_motor.hpp"
+#include "stuffs/motor.hpp"
 
 #include "FSM.hpp"
 #include "myactuator_rmd/driver.hpp"
@@ -17,7 +16,7 @@
 namespace robot {
 
 using JointStates = std::vector<double>;
-using MotorList = std::vector<double>;
+using MotorList = std::vector<Motor>;
 
 
 
@@ -32,7 +31,7 @@ using MotorList = std::vector<double>;
         
         
         
-        std::vector<Motor> MotorList;
+        MotorList MotorList_;
 
         std::vector<int> previousShaftAngle;
         std::vector<double> currentAngle;
@@ -50,18 +49,18 @@ using MotorList = std::vector<double>;
 
         Robot();
         Robot(Robot&& other) noexcept;       
-        void addMotorR(std::uint32_t actuator_id);
+        void addMotorR(Motor motor);
         void showCurrentState();
         void showCurrentJoint(); 
         void setJoint(std::vector<double> joint);
-        void setMotor(std::vector<std::uint32_t> motor);
+        void setMotor(Motor motor);
         void setDriver(myactuator_rmd::Driver* driver);
 
-        void updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback);
+        void updateJointPosition(int jointNum, myactuator_rmd::Feedback feedback);
       
-        void calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle);
+        void calculateCurrentAngle(int jointNum, int currentShaftAngle);
 
-        void actuateMotor(std::uint32_t actuator_id,float controlSignal);
+        void actuateMotor(int jointNum,float controlSignal);
     };
 
 }

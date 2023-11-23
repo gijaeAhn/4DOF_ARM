@@ -1,4 +1,5 @@
 #include "robot_body.hpp"
+#include "stuffs/motor.hpp"
 
 
 
@@ -15,7 +16,7 @@ Robot::Robot(Robot&& other) noexcept
      fsm_(std::move(other.fsm_)),
      previousShaftAngle(std::move(other.previousShaftAngle)),
      currentAngle(std::move(other.currentAngle)),
-     MotorList(std::move(other.MotorList))
+     MotorList_(std::move(other.MotorList_))
 {
 
 }
@@ -30,28 +31,25 @@ void Robot::showCurrentJoint(){
     printf("\033[0m");
 }
 
-void Robot::addMotorR(std::uint32_t actuator_id){
+void Robot::addMotorR(Motor motor){
 
-    driver_->addMotor(actuator_id);    
-    driver_->MotorRunning(actuator_id);
+    driver_->addMotor(motor.motor_id);    
+    driver_->MotorRunning(motor.motor_id);
     std::cout << "Motor set" << std::endl;
-    myactuator_rmd::Feedback buf {driver_->sendTorqueSetpoint(actuator_id,0)};
+    myactuator_rmd::Feedback buf {driver_->sendTorqueSetpoint(motor.motor_id,0)};
     std::cout << "Motor torque 0 set" << std::endl;
     previousShaftAngle.push_back(buf.shaft_angle);
     currentAngle.push_back(0);
     std::cout << currentAngle.size() << std::endl;
-    sleep(5);
+    sleep(3);
     }
 
 void Robot::setJoint(std::vector<double> joint)
     {currentAngle = joint;}
 
-void Robot::setMotor(std::vector<uint32_t> motor){
-    MotorList = motor;
-
-    for(int i =0; i<motor.size(); i++){
-        addMotorR(motor[i]);
-    }
+void Robot::setMotor(Motor motor){
+    MotorList_.push_back(motor);
+    addMotorR(motor);
     std::cout << "Debug 5" << std::endl;
 
 }
@@ -61,40 +59,40 @@ void Robot::setDriver(myactuator_rmd::Driver* driver)
 
 
 
-void Robot::updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback) 
+void Robot::updateJointPosition(int jointNum, myactuator_rmd::Feedback feedback) 
         {
             int currentShaftAngle = feedback.shaft_angle;
-            calculateCurrentAngle(actuator_id, currentShaftAngle);
-            previousShaftAngle[actuator_id -1] = currentShaftAngle;
+            calculateCurrentAngle(jointNum, currentShaftAngle);
+            previousShaftAngle[jointNum -1] = currentShaftAngle;
   
         }
 
-void Robot::calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle)
+void Robot::calculateCurrentAngle(int jointNum, int currentShaftAngle)
         {    
 
             float shaftChange =0;
-            if (currentShaftAngle - previousShaftAngle[actuator_id-1] > 40000) {
-                shaftChange = -((myactuator_rmd::maxShaftAngle - currentShaftAngle) + previousShaftAngle[actuator_id-1]);
+            if (currentShaftAngle - previousShaftAngle[jointNum-1] > 40000) {
+                shaftChange = -((myactuator_rmd::maxShaftAngle - currentShaftAngle) + previousShaftAngle[jointNum-1]);
             }
-            if (currentShaftAngle - previousShaftAngle[actuator_id-1] < -40000) {
-                shaftChange = currentShaftAngle + (myactuator_rmd::maxShaftAngle - previousShaftAngle[actuator_id-1]);
+            if (currentShaftAngle - previousShaftAngle[jointNum-1] < -40000) {
+                shaftChange = currentShaftAngle + (myactuator_rmd::maxShaftAngle - previousShaftAngle[jointNum-1]);
             }
             else
             {
-                shaftChange = currentShaftAngle - previousShaftAngle[actuator_id-1];
+                shaftChange = currentShaftAngle - previousShaftAngle[jointNum-1];
             }
 
-            currentAngle[actuator_id-1] += shaftChange/myactuator_rmd::maxShaftAngle*myactuator_rmd::oneShaftCycle;
+            currentAngle[jointNum-1] += shaftChange/myactuator_rmd::maxShaftAngle*myactuator_rmd::oneShaftCycle;
 
         }
 
-void Robot::actuateMotor(std::uint32_t actuator_id, float controlSignal) 
+void Robot::actuateMotor(int jointNum, float controlSignal) 
         {   
             myactuator_rmd::Feedback buf;
             // Clamping controlSignal to the range of -20.0 to 20.0
             float clampedSignal = std::max(-20.0f, std::min(controlSignal, 20.0f));
-            buf = driver_->sendTorqueSetpoint(actuator_id, clampedSignal);
-            updateMotorPosition(actuator_id,buf);
+            buf = driver_->sendTorqueSetpoint(jointNum, clampedSignal);
+            updateJointPosition(jointNum,buf);
         }
 
 
