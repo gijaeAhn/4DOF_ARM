@@ -1,6 +1,7 @@
 #include "myactuator_rmd/driver.hpp"
 #include "myactuator_rmd/actuator_state/feedback.hpp"
 #include "robot_body.hpp"
+#include "memory/SHM.hpp"
 
 #include <iostream>
 #include <vector>
@@ -24,6 +25,7 @@ class robotPositionController {
         float proportionalGain;
         float integralGain;
         float derivativeGain;
+        memory::SHM PID_SHM;
         
 
 

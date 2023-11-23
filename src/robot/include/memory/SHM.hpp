@@ -37,7 +37,7 @@ namespace memory{
         int SHM_CREATE();
         int SHM_WRITE(T* data);
         int SHM_READ(T* smeomry);
-        int SHM_FREE();
+        void SHM_FREE();
 
     };
 
@@ -132,16 +132,16 @@ namespace memory{
     }
     
     template<typename T>
-    int SHM<T>::SHM_FREE()
+    void SHM<T>::SHM_FREE()
     {
         if(shmctl(SHM_id, IPC_RMID, 0) == -1) 
         {
             perror("SHM_FREE : Shmctl failed");
-            return 1;
+            return ;
         }
     
         printf("Destruct SHM");
-        return 0;
+        return ;
     }
 
 

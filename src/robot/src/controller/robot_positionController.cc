@@ -10,11 +10,11 @@ namespace robot{
 
 
         robotPositionController::robotPositionController(float pGain, float iGain,float dGain,Robot* robot) 
-        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain), robot_(robot)
+        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain), robot_(robot), PID_SHM(PID_CONTROL_KEY,ROBOT_MEM_SIZE)
         {   }
 
         robotPositionController::~robotPositionController()
-        {}
+        {PID_SHM.SHM_FREE();}
 
         
 
