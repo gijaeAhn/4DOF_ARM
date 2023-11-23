@@ -57,10 +57,10 @@ void Robot::getJoint(){
 }
 
 void Robot::run(){
+    Timer timer;
     timer.next_execution = std::chrono::steady_clock::now();
     while(true){
-    timer.next_execution += timer.interval_;
-    std::this_thread::sleep_until(timer.next_execution);
+    timer.wait();
     getJoint();
     }
 

@@ -2,6 +2,7 @@
 #define ROBOT_TIMER
 #include <chrono>
 #include <tbb/tick_count.h>
+#include <thread>
 namespace robot{
 
 struct Timer{
@@ -32,6 +33,7 @@ struct Timer{
     }
     void wait() {
         next_execution += interval_;
+        std::this_thread::sleep_until(next_execution);
     }
 
     double getDuration() const {

@@ -1,3 +1,6 @@
+#ifndef ROBOT_SHM
+#define ROBOT_SHM
+#pragma once
 #include <iostream>
 #include <sys/ipc.h>
 #include <sys/shm.h>
@@ -30,10 +33,8 @@ namespace memory{
         public :
 
         SHM(int key, int size);
-        SHM() = delete;
-        SHM(SHM other) = delete;
 
-        int SHM_INIT();
+        void SHM_INIT();
         int SHM_CREATE();
         int SHM_WRITE(T* data);
         int SHM_READ(T* smeomry);
@@ -46,8 +47,8 @@ namespace memory{
     {}
 
     template<typename T>
-    int SHM<T>::SHM_INIT(){
-        if((shmid = shmget((key_t)SHM_key, 0, 0)) == -1)
+    void SHM<T>::SHM_INIT(){
+        if((SHM_id = shmget((key_t)SHM_key, 0, 0)) == -1)
     {
         perror("SHM_INIT : Failed to get SHM_ID");
     }
@@ -68,10 +69,10 @@ namespace memory{
         }
         else
         {
-            SharedMemoryFree();
-            shmid = shmget((key_t)KEY_NUM, MEM_SIZE, IPC_CREAT| 0666);
+            SHM_FREE();
+            SHM_id = shmget((key_t)SHM_key, ROBOT_MEM_SIZE, IPC_CREAT| 0666);
             
-            if(shmid == -1)
+            if(SHM_id == -1)
             {
                 perror("SHM_CREATE : SHM create fail");
                 return 1;
@@ -122,7 +123,7 @@ namespace memory{
         
         memcpy(smemory, (T *)SHMaddr, sizeof(smemory));
         
-        if(shmdt(shmaddr) == -1)
+        if(shmdt(SHMaddr) == -1)
         {
             perror("SHM_READ : Shmdt failed");
             return 1;
@@ -146,3 +147,5 @@ namespace memory{
 
 
 }
+
+#endif
