@@ -14,8 +14,7 @@
 #define  GRAVITY_COMPENSATION_KEY   1002
 #define  ANGLE_KEY                1003
 #define  ROBOT_MEM_SIZE 2
-
-
+#define MOTORINIT_TIME   5
 
 namespace memory{
 
@@ -34,7 +33,7 @@ namespace memory{
 
         SHM(int key, int size);
 
-        void SHM_INIT();
+        void SHM_GETID();
         int SHM_CREATE();
         int SHM_WRITE(T* data);
         int SHM_READ(T* smeomry);
@@ -47,19 +46,21 @@ namespace memory{
     {}
 
     template<typename T>
-    void SHM<T>::SHM_INIT(){
+    void SHM<T>::SHM_GETID(){
         if((SHM_id = shmget((key_t)SHM_key, 0, 0)) == -1)
-    {
-        perror("SHM_INIT : Failed to get SHM_ID");
-    }
+        {
+        perror("SHM_GETID : Failed to get SHM_ID");
+        }
+        printf("Success to get SHM_ID\n");
 
     }
     template<typename T>
     int SHM<T>::SHM_CREATE(){
 
         if((SHM_id = shmget((key_t)SHM_key, SHM_size, IPC_CREAT| IPC_EXCL | 0666)) == -1) {
-        printf("SHM_CREATE : SHM already exist.");
-        
+        printf("SHM_CREATE : SHM already exist.\n");
+        SHM_GETID();
+        SHM_FREE();
         SHM_id = shmget((key_t)SHM_key, SHM_size, IPC_CREAT| 0666);
         
         if(SHM_id == -1)
@@ -134,14 +135,20 @@ namespace memory{
     
     template<typename T>
     void SHM<T>::SHM_FREE()
-    {
-        if(shmctl(SHM_id, IPC_RMID, 0) == -1) 
+    {   
+        SHM_GETID();
+        if (SHM_id < 0) {
+        std::cout << "SHM_FREE: Invalid SHM_id, cannot free memory." << std::endl;
+        return;
+        }
+        if(shmctl(SHM_id, IPC_RMID, nullptr) == -1) 
         {
             perror("SHM_FREE : Shmctl failed");
             return ;
         }
     
-        printf("Destruct SHM");
+    std::cout << "Shared memory (ID: " << SHM_id << ") successfully freed." << std::endl;
+
         return ;
     }
 

@@ -11,7 +11,14 @@ namespace robot {
 
 Robot::Robot()
     :robot_SHM(ANGLE_KEY,ROBOT_MEM_SIZE)
-    {}
+    {
+        robot_SHM.SHM_GETID();
+        for(int i = 0; i< ROBOT_MEM_SIZE; i++)
+        {
+            smemory[i] = 0; 
+        }
+        jointStates_.resize(ROBOT_MEM_SIZE);
+    }   
 
 Robot::Robot(Robot&& other) noexcept 
     :driver_(std::exchange(other.driver_, nullptr)),
@@ -19,11 +26,12 @@ Robot::Robot(Robot&& other) noexcept
      MotorList_(std::move(other.MotorList_)),
      robot_SHM(ANGLE_KEY,ROBOT_MEM_SIZE)
 {
-    robot_SHM.SHM_INIT();
+    robot_SHM.SHM_GETID();
     for(int i = 0; i< ROBOT_MEM_SIZE; i++)
     {
         smemory[i] = 0; 
     }
+    jointStates_.resize(ROBOT_MEM_SIZE);
     
 }
 
@@ -47,10 +55,12 @@ void Robot::setMotor(Motor motor){
 }
 
 void Robot::getJoint(){
-    
+
+
     robot_SHM.SHM_READ(smemory);
 
-    for (int i =0; ROBOT_MEM_SIZE; i++)
+
+    for (int i =0; i< ROBOT_MEM_SIZE; i++)
     {
         jointStates_[i] = smemory[i];
     }
@@ -61,7 +71,11 @@ void Robot::run(){
     timer.next_execution = std::chrono::steady_clock::now();
     while(true){
     timer.wait();
+
+
     getJoint();
+
+
     }
 
 }

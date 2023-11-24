@@ -155,6 +155,7 @@ namespace myactuator_rmd {
   Feedback Driver::sendTorqueSetpoint(std::uint32_t actuator_id,float const current) {
     SetTorqueRequest const request {current};
     auto const response {sendRecv<SetTorqueResponse>(actuator_id,request)};
+    
     return response.getStatus();
   }
 
