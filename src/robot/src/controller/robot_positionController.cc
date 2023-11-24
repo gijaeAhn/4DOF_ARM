@@ -16,7 +16,11 @@ namespace robot{
         }
 
         robotPositionController::~robotPositionController()
-        {PID_SHM.SHM_FREE();}
+        {   
+            PID_SHM.SHM_FREE();
+            
+        
+        }
 
         
 
@@ -103,6 +107,16 @@ namespace robot{
             //     }
             // } while ((controlSignal[0]!=0)||(controlSignal[1]!=0));
 
+            ////////////////////////////////////////////////////////
+
+            for(int it =0 ; it < ROBOT_MEM_SIZE ; it++)
+            {
+                controlThreads_.emplace_back(&robot::robotPositionController::singleMotorControl,this,robot_->MotorList_[it],setpoint[it]);
+            }
+
+            for (auto& thread : controlThreads_){
+                thread.join();
+            }
         }
 
     void robotPositionController::singleMotorControl(Motor motor, double setpoint){
@@ -138,7 +152,7 @@ namespace robot{
 
     }
 
-    void robotPositionController::run(){
+    void robotPositionController::PIDrun(){
         Timer timer;
 
         timer.next_execution = std::chrono::steady_clock::now();
@@ -146,6 +160,10 @@ namespace robot{
             timer.wait();
             PID_SHM.SHM_WRITE(signal);
         }
+    }
+
+    void robotPositionController::robotrun(){
+        robot_->run();
     }
     
         

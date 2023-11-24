@@ -9,6 +9,7 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+
 find_package(Threads REQUIRED)
 
 
@@ -18,5 +19,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include
                     ${FSM_SOURCE_DIR}/include
                     ${robot_SOURCE_DIR}/include)
 
-add_executable(test src/test.cc)
-target_link_libraries(test robot )
+add_executable(PIDrun src/PIDrun.cc)
+target_link_libraries(PIDrun robot
+                           Threads::Threads)

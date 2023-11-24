@@ -23,17 +23,20 @@ class robotPositionController {
     private :
 
         Robot* robot_;
+        memory::SHM<float> PID_SHM;
+        float signal[ROBOT_MEM_SIZE];
+        std::vector<std::thread> controlThreads_;
 
    
         
-        const float errorThreshold = 0.01;
-                
+        
+        const float errorThreshold = 0.01;        
         float proportionalGain;
         float integralGain;
         float derivativeGain;
-        memory::SHM<float> PID_SHM;
+        
 
-        float signal[ROBOT_MEM_SIZE];
+
         
 
 
@@ -52,7 +55,9 @@ class robotPositionController {
 
         void singleMotorControl(Motor motor, double setpoint);
 
-        void run();
+        void PIDrun();
+
+        void robotrun();
 
 
     

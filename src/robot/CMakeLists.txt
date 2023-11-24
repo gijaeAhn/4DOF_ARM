@@ -16,14 +16,31 @@ file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
   ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc
 )
 
+find_package(Threads REQUIRED)
+
 add_library(robot SHARED ${SRC_FILES})
 
 
-target_include_directories(robot PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${myactuator_rmd_SOURCE_DIR}/include ${FSM_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(robot PUBLIC 
+                          ${CMAKE_CURRENT_SOURCE_DIR}/include 
+                          ${myactuator_rmd_SOURCE_DIR}/include 
+                          ${FSM_SOURCE_DIR}/include 
+                          ${CMAKE_CURRENT_SOURCE_DIR}/include)
 # target_compile_options(robot PRIVATE -Wall -Werror)
 target_compile_features(robot PRIVATE cxx_std_17)
 target_link_libraries(robot FSM myactuator_rmd)
 
+add_executable(robot_pub src/robot_pub.cc)
+target_link_libraries(robot_pub 
+                                FSM 
+                                myactuator_rmd 
+                                robot
+                                Threads::Threads)
+target_include_directories(robot_pub PUBLIC 
+                          ${CMAKE_CURRENT_SOURCE_DIR}/include 
+                          ${myactuator_rmd_SOURCE_DIR}/include 
+                          ${FSM_SOURCE_DIR}/include 
+                          ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # # include(FetchContent)
 
