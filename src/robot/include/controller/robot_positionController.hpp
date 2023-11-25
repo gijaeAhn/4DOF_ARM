@@ -30,10 +30,10 @@ class robotPositionController {
    
         
         
-        const float errorThreshold;        
+      
         float proportionalGain;
         float integralGain;
-        float derivativeGain;
+        float derivativeGain;   
         
 
 

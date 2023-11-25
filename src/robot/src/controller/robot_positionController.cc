@@ -165,16 +165,16 @@ namespace robot{
                                     integralGain     *      pid_error.integralError_ +
                                     derivativeGain   *      pid_error.derivativeError_;
 
-                    if (std::abs(error) < overshootThreshold && std::abs(pid_error.derivativeError_) < errorThreshold){
-                    controlSignal = 0.0; 
-                    }                
+                                   
 
                     signal[motor.motor_id-1] = controlSignal;
+                    if(iteration % 300 ==0){
                     printf("Motor ID :%d , Posotion : %f,  Signal : %lf\n",motor.motor_id,robot_->jointPosition_[motor.motor_id-1] ,controlSignal);
+                    robot_->showCurrentJoint();}
+                    iteration++;
+                // }while((std::abs(pid_error.error_) > errorThreshold)&& (controlSignal > 1e-3));
+                }while(true);
 
-                }while((std::abs(pid_error.error_) > errorThreshold)&& (controlSignal <1e-5));
-
-            std::cout << "Single RMD Motor" << motor.motor_id << "PID END" << std::endl;
             }
             // RMD CONTROL PID END
 
