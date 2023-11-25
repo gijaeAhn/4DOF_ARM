@@ -30,7 +30,7 @@ class robotPositionController {
    
         
         
-        const float errorThreshold = 0.01;        
+        const float errorThreshold;        
         float proportionalGain;
         float integralGain;
         float derivativeGain;

@@ -17,7 +17,7 @@ Robot::Robot()
         {
             smemory[i] = 0; 
         }
-        jointStates_.resize(ROBOT_MEM_SIZE);
+        jointPosition_.resize(ROBOT_MEM_SIZE);
     }   
 
 Robot::Robot(Robot&& other) noexcept 
@@ -31,14 +31,14 @@ Robot::Robot(Robot&& other) noexcept
     {
         smemory[i] = 0; 
     }
-    jointStates_.resize(ROBOT_MEM_SIZE);
+    jointPosition_.resize(ROBOT_MEM_SIZE);
     
 }
 
 void Robot::showCurrentJoint(){
     printf("\033[0;31m");
     printf(" Current Joint Angle :");
-    for(auto joint : jointStates_){
+    for(auto joint : jointPosition_){
         printf("%f ",joint );
     }
     printf("\n");
@@ -48,7 +48,7 @@ void Robot::showCurrentJoint(){
 
 
 void Robot::setJoint(JointStates joint)
-    {jointStates_ = joint;}
+    {jointPosition_ = joint;}
 
 void Robot::setMotor(Motor motor){
     MotorList_.push_back(motor);
@@ -62,7 +62,7 @@ void Robot::getJoint(){
 
     for (int i =0; i< ROBOT_MEM_SIZE; i++)
     {
-        jointStates_[i] = smemory[i];
+        jointPosition_[i] = smemory[i];
     }
 }
 

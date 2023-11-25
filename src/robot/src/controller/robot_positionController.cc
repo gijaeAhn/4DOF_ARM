@@ -1,4 +1,5 @@
 #include "controller/robot_positionController.hpp"
+#define DEGREE_2_RADIAN 0.0174532925
 
 
 
@@ -129,39 +130,54 @@ namespace robot{
         }
 
     void robotPositionController::singleMotorControl(Motor motor, double setpoint){
-            int iteration = 0;
-            double controlSignal =0;
+            
 
-            // if(motor.motor_type == static_cast<std::string>("RMD")){
+            // RMD MOTOR PID CONTROL
+            if(motor.motor_type == static_cast<std::string>("RMD")){
+                int iteration = 0;
+                double controlSignal =0;
+                double current_position =0;
+                double error = 0;
+                const double errorThreshold = 0.01;
+                const double overshootThreshold = 0.1;
+
+                
+
+
+
                 
                 PID_ERROR pid_error(0,0,0,0);
                 Timer pid_timer;    
                 pid_timer.start();
                 pid_timer.stop();
                 pid_timer.next_execution = std::chrono::steady_clock::now();
-                double buf_error =0;
+
 
                 do{ 
                     pid_timer.wait();
+                    double currentPosition = robot_->jointPosition_[motor.motor_id - 1];
+                    double error = (setpoint - currentPosition) * DEGREE_2_RADIAN;
+                    double ivalue = pid_timer.dt_ * error; 
+                    double deriva = (error - pid_error.error_) / pid_timer.dt_; 
+                    pid_error.setError(error, ivalue, deriva);
+                    
+                    controlSignal = proportionalGain *      pid_error.error_ +
+                                    integralGain     *      pid_error.integralError_ +
+                                    derivativeGain   *      pid_error.derivativeError_;
 
-                    buf_error = setpoint - robot_->jointStates_[motor.motor_id-1];
-                    pid_error.previousError_ = pid_error.error_;
-                    pid_error.setError(buf_error ,buf_error, (buf_error - pid_error.previousError_)/pid_timer.dt_);
-
-                    if(buf_error < errorThreshold){
-                        iteration++;
-                    }
-
-                    controlSignal = proportionalGain * pid_error.error_ + integralGain * pid_error.integralError_ + derivativeGain * pid_error.derivativeError_;
+                    if (std::abs(error) < overshootThreshold && std::abs(pid_error.derivativeError_) < errorThreshold){
+                    controlSignal = 0.0; 
+                    }                
 
                     signal[motor.motor_id-1] = controlSignal;
-                    printf("Motor ID :%d , Posotion : %f,  Signal : %lf\n",motor.motor_id,robot_->jointStates_[motor.motor_id-1] ,controlSignal);
+                    printf("Motor ID :%d , Posotion : %f,  Signal : %lf\n",motor.motor_id,robot_->jointPosition_[motor.motor_id-1] ,controlSignal);
 
-                }while((controlSignal !=0) && (std::abs(buf_error) > errorThreshold)&& (iteration > 200) );
+                }while((std::abs(pid_error.error_) > errorThreshold)&& (controlSignal <1e-5));
 
-            // }
+            std::cout << "Single RMD Motor" << motor.motor_id << "PID END" << std::endl;
+            }
+            // RMD CONTROL PID END
 
-        std::cout << "Single Motor" << motor.motor_id << "PID END" << std::endl;
 
     }
 

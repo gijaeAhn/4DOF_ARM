@@ -14,8 +14,9 @@ struct PID_ERROR{
     :previousError_(previousError),  error_(error),  integralError_(integralError), derivativeError_(derivativeError)
     {}
 
-    void setError( double error ,double ivalue, double deriva){
+    void setError(double error ,double ivalue, double deriva){
         error_ = error;
+
         integralError_ += ivalue;
         derivativeError_ = deriva;  
     }

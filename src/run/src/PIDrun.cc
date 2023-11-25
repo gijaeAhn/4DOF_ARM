@@ -29,7 +29,7 @@ int main()
                               .buildJoint(motor1)
                               .buildJoint(motor2)
                               .build());
-    robot::robotPositionController test_posControl(0.0015,0.0000001,0.000001, &test_robot);
+    robot::robotPositionController test_posControl(0.3,0.0,0.01, &test_robot);
 
 
     
@@ -37,11 +37,6 @@ int main()
     //Run Threads
     std::thread robotrun(&robot::Robot::run,&test_robot);
     std::thread PIDrun(&robot::robotPositionController::PIDrun,&test_posControl);
-    
-    std::cout << "Debug 2" << std::endl;
-
-    std::cout << "Debug 3" << std::endl;
-
     
 
     sleep(MOTORINIT_TIME);

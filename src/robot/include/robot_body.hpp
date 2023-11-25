@@ -28,7 +28,7 @@ using MotorList = std::vector<Motor>;
         friend class robotPositionController;
         protected :
         
-        JointStates jointStates_;
+        JointStates jointPosition_;
         MotorList MotorList_;
         fsm::FSM fsm_;
         myactuator_rmd::Driver* driver_;
