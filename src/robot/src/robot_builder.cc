@@ -4,6 +4,7 @@
 
 
 #include "robot_builder.hpp"
+#include "stuffs/motor.hpp"
 
 
 namespace robot {
@@ -11,15 +12,15 @@ namespace robot {
 
 RobotBuilder::RobotBuilder(){}
 
-RobotBuilder& RobotBuilder::buildJoint(std::vector<uint32_t> motor){
+RobotBuilder& RobotBuilder::buildJoint(Motor motor){
     robot_.setMotor(motor);
     return *this;
 }
 
-RobotBuilder& RobotBuilder::buildSystem(myactuator_rmd::Driver* driver){
-    robot_.setDriver(driver);
-    return *this;
-}
+// RobotBuilder& RobotBuilder::buildSystem(myactuator_rmd::Driver* driver){
+//     robot_.setDriver(driver);
+//     return *this;
+// }
 
 Robot RobotBuilder::build(){
     return std::move(robot_);

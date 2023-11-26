@@ -1,4 +1,5 @@
 #include "robot_body.hpp"
+#include "stuffs/motor.hpp"
 
 
 
@@ -8,95 +9,74 @@ namespace robot {
 
 
 
-Robot::Robot(){};
+Robot::Robot()
+    :robot_SHM(ANGLE_KEY,ROBOT_MEM_SIZE)
+    {
+        robot_SHM.SHM_GETID();
+        for(int i = 0; i< ROBOT_MEM_SIZE; i++)
+        {
+            smemory[i] = 0; 
+        }
+        jointPosition_.resize(ROBOT_MEM_SIZE);
+    }   
 
 Robot::Robot(Robot&& other) noexcept 
     :driver_(std::exchange(other.driver_, nullptr)),
      fsm_(std::move(other.fsm_)),
-     previousShaftAngle(std::move(other.previousShaftAngle)),
-     currentAngle(std::move(other.currentAngle)),
-     MotorList(std::move(other.MotorList))
+     MotorList_(std::move(other.MotorList_)),
+     robot_SHM(ANGLE_KEY,ROBOT_MEM_SIZE)
 {
-
+    robot_SHM.SHM_GETID();
+    for(int i = 0; i< ROBOT_MEM_SIZE; i++)
+    {
+        smemory[i] = 0; 
+    }
+    jointPosition_.resize(ROBOT_MEM_SIZE);
+    
 }
 
 void Robot::showCurrentJoint(){
     printf("\033[0;31m");
     printf(" Current Joint Angle :");
-    for(auto joint : currentAngle){
+    for(auto joint : jointPosition_){
         printf("%f ",joint );
     }
     printf("\n");
     printf("\033[0m");
 }
 
-void Robot::addMotorR(std::uint32_t actuator_id){
 
-    driver_->addMotor(actuator_id);    
-    driver_->MotorRunning(actuator_id);
-    std::cout << "Motor set" << std::endl;
-    myactuator_rmd::Feedback buf {driver_->sendTorqueSetpoint(actuator_id,0)};
-    std::cout << "Motor torque 0 set" << std::endl;
-    previousShaftAngle.push_back(buf.shaft_angle);
-    currentAngle.push_back(0);
-    std::cout << currentAngle.size() << std::endl;
-    sleep(5);
-    }
 
-void Robot::setJoint(std::vector<double> joint)
-    {currentAngle = joint;}
+void Robot::setJoint(JointStates joint)
+    {jointPosition_ = joint;}
 
-void Robot::setMotor(std::vector<uint32_t> motor){
-    MotorList = motor;
-
-    for(int i =0; i<motor.size(); i++){
-        addMotorR(motor[i]);
-    }
-    std::cout << "Debug 5" << std::endl;
-
+void Robot::setMotor(Motor motor){
+    MotorList_.push_back(motor);
 }
 
-void Robot::setDriver(myactuator_rmd::Driver* driver)
-    {driver_ = driver;}
+void Robot::getJoint(){
 
 
-
-void Robot::updateMotorPosition(std::uint32_t actuator_id, myactuator_rmd::Feedback feedback) 
-        {
-            int currentShaftAngle = feedback.shaft_angle;
-            calculateCurrentAngle(actuator_id, currentShaftAngle);
-            previousShaftAngle[actuator_id -1] = currentShaftAngle;
-  
-        }
-
-void Robot::calculateCurrentAngle(std::uint32_t actuator_id, int currentShaftAngle)
-        {    
-
-            float shaftChange =0;
-            if (currentShaftAngle - previousShaftAngle[actuator_id-1] > 40000) {
-                shaftChange = -((myactuator_rmd::maxShaftAngle - currentShaftAngle) + previousShaftAngle[actuator_id-1]);
-            }
-            if (currentShaftAngle - previousShaftAngle[actuator_id-1] < -40000) {
-                shaftChange = currentShaftAngle + (myactuator_rmd::maxShaftAngle - previousShaftAngle[actuator_id-1]);
-            }
-            else
-            {
-                shaftChange = currentShaftAngle - previousShaftAngle[actuator_id-1];
-            }
-
-            currentAngle[actuator_id-1] += shaftChange/myactuator_rmd::maxShaftAngle*myactuator_rmd::oneShaftCycle;
-
-        }
-
-void Robot::actuateMotor(std::uint32_t actuator_id, float controlSignal) 
-        {   
-            myactuator_rmd::Feedback buf;
-            // Clamping controlSignal to the range of -20.0 to 20.0
-            float clampedSignal = std::max(-20.0f, std::min(controlSignal, 20.0f));
-            buf = driver_->sendTorqueSetpoint(actuator_id, clampedSignal);
-            updateMotorPosition(actuator_id,buf);
-        }
+    robot_SHM.SHM_READ(smemory);
 
 
+    for (int i =0; i< ROBOT_MEM_SIZE; i++)
+    {
+        jointPosition_[i] = smemory[i];
+    }
+}
 
+void Robot::run(){
+    Timer timer;
+    timer.next_execution = std::chrono::steady_clock::now();
+    while(true){
+    timer.wait();
+
+
+    getJoint();
+
+
+    }
+
+}
 }

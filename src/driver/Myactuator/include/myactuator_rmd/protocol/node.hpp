@@ -132,13 +132,10 @@ namespace myactuator_rmd {
   template <std::uint32_t SEND_ID_OFFSET, std::uint32_t RECEIVE_ID_OFFSET>
   template <typename RESPONSE_TYPE>
   RESPONSE_TYPE Node<SEND_ID_OFFSET,RECEIVE_ID_OFFSET>::sendRecv(std::uint32_t const actuator_id, Message const& request) {
-    std::cout << "Actuator Number : " << actuator_id << std::endl;
-    std::cout << "send recieve id : " << can_send_id_[actuator_id -1] <<" " << can_receive_id_[actuator_id-1]<< std::endl;
-    // mtx.lock();
     write(can_send_id_[actuator_id -1], request.getData());
     can::Frame const frame {can::Node::read(can_receive_id_[actuator_id-1])};
-        std::cout << "read" << std::endl;
-    // mtx.unlock();
+
+
 
 
     RESPONSE_TYPE const response {frame.getData()};
