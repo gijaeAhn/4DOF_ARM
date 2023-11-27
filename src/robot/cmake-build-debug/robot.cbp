@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="robot"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robot">
+				<Option output="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/librobot.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gj/Desktop/4DOF_ARM/src/robot/include"/>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 robot"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robot/fast">
+				<Option output="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/librobot.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gj/Desktop/4DOF_ARM/src/robot/include"/>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 robot/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robot_pub">
+				<Option output="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/robot_pub" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gj/Desktop/4DOF_ARM/src/robot/include"/>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 robot_pub"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robot_pub/fast">
+				<Option output="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/robot_pub" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gj/Desktop/4DOF_ARM/src/robot/include"/>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 robot_pub/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc">
+			<Option target="robot"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc">
+			<Option target="robot"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc">
+			<Option target="robot"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc">
+			<Option target="robot"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc">
+			<Option target="robot"/>
+			<Option target="robot_pub"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/robot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
