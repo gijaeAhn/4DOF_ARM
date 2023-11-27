@@ -8,7 +8,7 @@
 #include <iostream>
 #include <csignal>
 
-#define MOTORINIT_TIME   5
+
 
 
 memory::SHM<float> getSHM_PID(PID_CONTROL_KEY,ROBOT_MEM_SIZE);
@@ -63,35 +63,35 @@ memory::SHM<float> setSHM_ANGLE(ANGLE_KEY,ROBOT_MEM_SIZE);
         shaftChange[i] = 0;
         sleep(MOTORINIT_TIME);
     }
-
-    std::cout << " Debug 3" << std::endl;
-
+    int iteration = 0;
     setSHM_ANGLE.SHM_WRITE(ang_buffer);
-
-    std::cout << " Debug 4" << std::endl;
-
-    
-
     while(true){
+        iteration ++;
         timer.wait();
         getSHM_PID.SHM_READ(pid_buffer);
         getSHM_PID.SHM_READ(grav_buffer);
-        std::cout << "Motor 1 signal " <<pid_buffer[0] << std::endl;
-        std::cout << "Motor 2 signal " <<pid_buffer[1] << std::endl;
 
         
             for(int iter =0; iter < ROBOT_MEM_SIZE; iter++)
-            {
+            {   
+                
+
                 sum_buffer[iter] = std::max(-20.0f, std::min(pid_buffer[iter] , 20.0f));
 
                 buf_feed[iter] = driver.sendTorqueSetpoint(iter+1,sum_buffer[iter]);
                 currentShaft[iter] = buf_feed[iter].shaft_angle;
-                std::cout << "current shaft " << iter+1 << " " << currentShaft[iter] << std::endl;
+                if(iteration %300 ==0){
+                printf("Motor 1 siganl : %f\n", pid_buffer[0]);
+                printf("Motor 2 siganl : %f\n", pid_buffer[1]);
 
-                if (currentShaft[iter] - previousShaft[iter] > 40000) {
+                printf("Current Shaft %d, : %lf \n", iter+1, currentShaft[iter]);
+
+                }
+
+                if (currentShaft[iter] - previousShaft[iter] > 50000) {
                     shaftChange[iter] = -((myactuator_rmd::maxShaftAngle - currentShaft[iter]) + previousShaft[iter]);
                 }
-                if (currentShaft[iter] - previousShaft[iter] < -40000) {
+                else if (currentShaft[iter] - previousShaft[iter] < -50000) {
                     shaftChange[iter] = currentShaft[iter] + (myactuator_rmd::maxShaftAngle - previousShaft[iter]);
                 }
                 else

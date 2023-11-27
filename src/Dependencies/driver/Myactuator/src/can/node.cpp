@@ -102,9 +102,8 @@ namespace myactuator_rmd {
 
     Frame Node::read(uint32_t actuator_id) const {
       struct ::can_frame frame {};
-      std::cout << actuator_id << std::endl;
       rfilter.can_id = actuator_id;
-      std::cout << "rfilter.can_id : " << rfilter.can_id << std::endl;
+      // std::cout << "rfilter.can_id : " << rfilter.can_id << std::endl;
       ::setsockopt(socket_,SOL_CAN_RAW,CAN_RAW_FILTER,&rfilter,sizeof(rfilter));
 
       if (::read(socket_,&frame,sizeof(frame)) < 0) {
@@ -155,13 +154,7 @@ namespace myactuator_rmd {
       std::copy(std::begin(data), std::end(data), std::begin(frame.data));
 
       float return_frame_size = ::write(socket_,&frame,sizeof(struct ::can_frame));
-      std::cout << "Percentage of Return frame : " << return_frame_size/sizeof(struct ::can_frame) * 100<< "%" << std::endl;
-      
-      // if (::write(socket_, &frame, sizeof(struct ::can_frame)) != sizeof(struct ::can_frame)) {
-      //   std::ostringstream ss {};
-      //   ss << frame;
-      //   throw SocketException(errno, std::generic_category(), "Interface '" + ifname_ + "' - Could not write CAN frame '" + ss.str() + "'");
-      // }
+
       return;
     }
 

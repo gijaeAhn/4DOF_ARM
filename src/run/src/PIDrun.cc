@@ -29,7 +29,7 @@ int main()
                               .buildJoint(motor1)
                               .buildJoint(motor2)
                               .build());
-    robot::robotPositionController test_posControl(0.3,0.0,0.01, &test_robot);
+    robot::robotPositionController test_posControl(0.3,0.3,0.1, &test_robot);
 
 
     
