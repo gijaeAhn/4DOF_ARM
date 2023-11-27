@@ -1,8 +1,0 @@
-prefix=/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/cmake-build-debug/devel
-
-Name: ball_localization
-Description: Description of ball_localization
-Version: 2.7.3
-Cflags: -I/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/cmake-build-debug/devel/include -I/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/include -I/usr/include/eigen3
-Libs: -L${prefix}/lib -lball_ekf -lball_ekf_localization_nodelet -lball_filter_base -lball_filter_utilities -lball_navsat_transform -lball_navsat_transform_nodelet -lros_ball_filter -lros_ball_filter_utilities -lball_localization_estimator -lros_ball_localization_listener -lball_ukf -lball_ukf_localization_nodelet -lyaml-cpp
-Requires: cmake_modules diagnostic_msgs diagnostic_updater eigen_conversions geographic_msgs geometry_msgs message_filters message_runtime nav_msgs roscpp sensor_msgs std_msgs std_srvs tf2 tf2_geometry_msgs tf2_ros

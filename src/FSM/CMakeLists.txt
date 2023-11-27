@@ -16,8 +16,7 @@ file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
   ${CMAKE_CURRENT_SOURCE_DIR}/*.cc
 )
 
-add_library(FSM SHARED ${SRC_FILES}
-        ../Dependencies/EKF/include/EKF_BASE.h)
+add_library(FSM SHARED ${SRC_FILES})
 
 
 target_include_directories(FSM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

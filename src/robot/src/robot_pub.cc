@@ -84,7 +84,7 @@ memory::SHM<float> setSHM_ANGLE(ANGLE_KEY,ROBOT_MEM_SIZE);
                 printf("Motor 1 siganl : %f\n", pid_buffer[0]);
                 printf("Motor 2 siganl : %f\n", pid_buffer[1]);
 
-                printf("Current Shaft %d, : %lf \n", iter+1, currentShaft[iter]);
+                printf("Current Shaft %d, : %d \n", iter+1, currentShaft[iter]);
 
                 }
 
