@@ -34,7 +34,7 @@ using MotorList = std::vector<Motor>;
         myactuator_rmd::Driver* driver_;
         memory::SHM<float> robot_SHM;
         float smemory[ROBOT_MEM_SIZE];
-        Timer timer;
+    
 
 
         
