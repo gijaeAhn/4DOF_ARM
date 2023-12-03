@@ -27,9 +27,10 @@ Robot::Robot()
 Robot::Robot(Robot&& other) noexcept 
     : driver_(std::exchange(other.driver_, nullptr)),
       fsm_(std::move(other.fsm_)),
-      MotorList_(std::move(other.MotorList_)),
+      motorList(std::move(other.motorList)),
       ANGLE_SHM(ANGLE_KEY, ROBOT_MEM_SIZE),
-      VEL_SHM(VEL_KEY,ROBOT_MEM_SIZE)
+      VEL_SHM(VEL_KEY,ROBOT_MEM_SIZE),
+      motorConstant_(std::move(other.motorConstant_))
 {
     ANGLE_SHM.SHM_GETID();
     VEL_SHM.SHM_GETID();
@@ -68,8 +69,9 @@ void Robot::showCurrentJointV(){
 
 
 void Robot::setMotor(Motor motor){
-    MotorList_.push_back(motor);
     motorConstant_.push_back(motor.motorConstant);
+    motorList.push_back(motor);
+
 }
 
 void Robot::setJoint(std::vector<float> position){
@@ -111,8 +113,7 @@ void Robot::run(){
         timer.wait();
         getJoint();
         getJointV();
-        showCurrentJoint();
-        showCurrentJointV();
+
     }
 
 }

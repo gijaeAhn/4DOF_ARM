@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/PIDrun.dir/src/PIDrun.cc.o -o ../bin/PIDrun  -Wl,-rpath,/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/lib ../lib/librobot.so ../lib/libFSM.so ../lib/libmyactuator_rmd.so -lpthread 

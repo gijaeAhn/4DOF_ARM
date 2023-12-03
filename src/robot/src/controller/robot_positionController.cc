@@ -110,7 +110,7 @@ namespace robot{
 
             for(int it =0 ; it < ROBOT_MEM_SIZE ; it++)
             {
-                controlThreads_.emplace_back(&robot::robotPositionController::singleMotorControl,this,robot_->MotorList_[it],setpoint[it]);
+                controlThreads_.emplace_back(&robot::robotPositionController::singleMotorControl, this, robot_->motorList[it], setpoint[it]);
             }
              std::cout << "Debug 5" << std::endl;
 
@@ -157,9 +157,10 @@ namespace robot{
                     double deriva = (error - pid_error.error_) / pid_timer.dt_; 
                     pid_error.setError(error, ivalue, deriva);
                     
-                    controlSignal = proportionalGain *      pid_error.error_ +
+                    controlSignal = static_cast<float>(
+                                    proportionalGain *      pid_error.error_ +
                                     integralGain     *      pid_error.integralError_ +
-                                    derivativeGain   *      pid_error.derivativeError_;
+                                    derivativeGain   *      pid_error.derivativeError_);
 
                                    
 

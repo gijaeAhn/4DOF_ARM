@@ -18,7 +18,7 @@ const int X6_CONST     = 75;
 
 const int X8_SHAFTCYCLE    = 60;
 const int X8_V2_SHAFTCYCLE  = 60;
-const int X6_SHAFTCYCLE     = 60;
+const int X6_SHAFTCYCLE     = 45;
 
 const int X8_GEAR     = 6;
 const int X8_V2_GEAR  = 6;

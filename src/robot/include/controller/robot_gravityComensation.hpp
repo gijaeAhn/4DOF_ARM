@@ -28,11 +28,11 @@ class robotGravityCompensation{
     private:
 
     Robot* robot_;
-    memory::SHM<double> GRAV_SHM;
-    memory::SHM<double> ANGLE_SHM;
-    double signal[ROBOT_MEM_SIZE];
-    double angle[ROBOT_MEM_SIZE];
-    double real_siganl[ROBOT_MEM_SIZE];
+    memory::SHM<float> GRAV_SHM;
+    memory::SHM<float> ANGLE_SHM;
+    float signal[ROBOT_MEM_SIZE];
+    float angle[ROBOT_MEM_SIZE];
+    float real_siganl[ROBOT_MEM_SIZE];
 
     public:
 

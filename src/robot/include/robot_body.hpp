@@ -40,7 +40,7 @@ using MotorList = std::vector<Motor>;
         std::vector<double> jointPosition_;
         std::vector<double> jointVelocity_;
         std::vector<double> motorConstant_;
-        MotorList MotorList_;
+        MotorList motorList;
         fsm::FSM fsm_;
         myactuator_rmd::Driver* driver_;
         memory::SHM<float> ANGLE_SHM;

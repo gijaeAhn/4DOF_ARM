@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libFSM.so -o ../lib/libFSM.so CMakeFiles/FSM.dir/src/FSM.cc.o 
