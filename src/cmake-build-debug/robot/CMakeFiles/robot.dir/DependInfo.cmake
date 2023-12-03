@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc" "robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o.d"
-  "/home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc" "robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o.d"
-  "/home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc" "robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o.d"
-  "/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc" "robot/CMakeFiles/robot.dir/src/robot_body.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/robot_body.cc.o.d"
-  "/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc" "robot/CMakeFiles/robot.dir/src/robot_builder.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/robot_builder.cc.o.d"
-  "/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc" "robot/CMakeFiles/robot.dir/src/robot_pub.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/robot_pub.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc" "robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc" "robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc" "robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc" "robot/CMakeFiles/robot.dir/src/robot_body.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/robot_body.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc" "robot/CMakeFiles/robot.dir/src/robot_builder.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/robot_builder.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc" "robot/CMakeFiles/robot.dir/src/robot_pub.cc.o" "gcc" "robot/CMakeFiles/robot.dir/src/robot_pub.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

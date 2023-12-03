@@ -1,4 +1,4 @@
-# Install script for directory: /home/gj/Desktop/4DOF_ARM/src/FSM
+# Install script for directory: /home/sj/Desktop/4DOF_ARM/src/FSM
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

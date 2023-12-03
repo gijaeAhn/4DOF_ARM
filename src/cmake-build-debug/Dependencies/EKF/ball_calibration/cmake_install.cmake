@@ -1,4 +1,4 @@
-# Install script for directory: /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration
+# Install script for directory: /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -61,7 +61,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -73,7 +73,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/env.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -86,8 +86,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.bash"
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.bash"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.bash"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
@@ -101,8 +101,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.sh"
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.sh"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.sh"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
@@ -116,8 +116,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.zsh"
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.zsh"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.zsh"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
@@ -130,29 +130,29 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/ball_calibration.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/ball_calibration.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration/cmake" TYPE FILE FILES
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/ball_calibrationConfig.cmake"
-    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/ball_calibrationConfig-version.cmake"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/ball_calibrationConfig.cmake"
+    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_calibration/catkin_generated/installspace/ball_calibrationConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration/launch")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_calibration" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_calibration/config")
 endif()
 

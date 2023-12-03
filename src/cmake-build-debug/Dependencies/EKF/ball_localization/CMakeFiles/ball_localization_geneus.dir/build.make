@@ -53,10 +53,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 # Utility rule file for ball_localization_geneus.
 
@@ -74,10 +74,10 @@ Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/build
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/build
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/clean:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -P CMakeFiles/ball_localization_geneus.dir/cmake_clean.cmake
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -P CMakeFiles/ball_localization_geneus.dir/cmake_clean.cmake
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/clean
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/depend:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gj/Desktop/4DOF_ARM/src /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sj/Desktop/4DOF_ARM/src /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/ball_localization_geneus.dir/depend
 

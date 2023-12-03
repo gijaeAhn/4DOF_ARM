@@ -777,23 +777,23 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11ConfigVersion.cmake"
+			"path" : "/home/sj/.local/share/cmake/pybind11/pybind11ConfigVersion.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake"
+			"path" : "/home/sj/.local/share/cmake/pybind11/pybind11Config.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Targets.cmake"
+			"path" : "/home/sj/.local/share/cmake/pybind11/pybind11Targets.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake"
+			"path" : "/home/sj/.local/share/cmake/pybind11/pybind11Common.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/gj/.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11NewTools.cmake"
+			"path" : "/home/sj/.local/share/cmake/pybind11/pybind11NewTools.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -2986,8 +2986,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug",
-		"source" : "/home/gj/Desktop/4DOF_ARM/src"
+		"build" : "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug",
+		"source" : "/home/sj/Desktop/4DOF_ARM/src"
 	},
 	"version" : 
 	{

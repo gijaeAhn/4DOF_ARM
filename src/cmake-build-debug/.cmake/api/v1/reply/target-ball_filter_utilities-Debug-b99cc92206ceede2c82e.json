@@ -252,11 +252,11 @@
 			[
 				{
 					"backtrace" : 29,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
 				},
 				{
 					"backtrace" : 30,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
 				},
 				{
 					"backtrace" : 30,

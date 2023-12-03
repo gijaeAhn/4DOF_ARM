@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gj/Desktop/4DOF_ARM/src/run/src/PIDrun.cc" "run/CMakeFiles/PIDrun.dir/src/PIDrun.cc.o" "gcc" "run/CMakeFiles/PIDrun.dir/src/PIDrun.cc.o.d"
+  "/home/sj/Desktop/4DOF_ARM/src/run/src/PIDrun.cc" "run/CMakeFiles/PIDrun.dir/src/PIDrun.cc.o" "gcc" "run/CMakeFiles/PIDrun.dir/src/PIDrun.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

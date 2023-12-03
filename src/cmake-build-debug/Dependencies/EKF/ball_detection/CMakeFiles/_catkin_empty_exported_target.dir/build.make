@@ -53,10 +53,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -74,10 +74,10 @@ Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/bui
 .PHONY : Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gj/Desktop/4DOF_ARM/src /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_detection /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sj/Desktop/4DOF_ARM/src /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_detection /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

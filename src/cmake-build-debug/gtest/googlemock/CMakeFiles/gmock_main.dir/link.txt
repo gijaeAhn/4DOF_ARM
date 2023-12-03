@@ -1,1 +1,1 @@
-/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libgmock_maind.so -o ../lib/libgmock_maind.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  -Wl,-rpath,/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/gtest/lib ../lib/libgmockd.so ../lib/libgtestd.so -lpthread 
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libgmock_maind.so -o ../lib/libgmock_maind.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  -Wl,-rpath,/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/gtest/lib ../lib/libgmockd.so ../lib/libgtestd.so -lpthread 

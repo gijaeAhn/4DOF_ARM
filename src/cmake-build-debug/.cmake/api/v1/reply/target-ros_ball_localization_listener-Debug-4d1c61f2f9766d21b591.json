@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "devel/lib/ball_localization/ball_navsat_transform_node"
+			"path" : "devel/lib/libros_ball_localization_listener.so"
 		}
 	],
 	"backtrace" : 1,
@@ -10,7 +10,7 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
+			"add_library",
 			"_install",
 			"install",
 			"link_directories",
@@ -48,13 +48,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 150,
+				"line" : 139,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 200,
+				"line" : 182,
 				"parent" : 0
 			},
 			{
@@ -72,13 +72,13 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 174,
+				"line" : 166,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 173,
+				"line" : 165,
 				"parent" : 0
 			},
 			{
@@ -225,7 +225,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17 -fdiagnostics-color=always"
+					"fragment" : "-g -std=gnu++17 -fPIC -fdiagnostics-color=always"
 				}
 			],
 			"defines" : 
@@ -249,17 +249,20 @@
 				{
 					"backtrace" : 23,
 					"define" : "ROS_PACKAGE_NAME=\"ball_localization\""
+				},
+				{
+					"define" : "ros_ball_localization_listener_EXPORTS"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 30,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
 				},
 				{
 					"backtrace" : 31,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
 				},
 				{
 					"backtrace" : 31,
@@ -297,21 +300,37 @@
 		},
 		{
 			"backtrace" : 5,
-			"id" : "ros_ball_filter_utilities::@19d4f88cbaf3b8a5a99b"
+			"id" : "ball_filter_base::@19d4f88cbaf3b8a5a99b"
 		},
 		{
 			"backtrace" : 5,
-			"id" : "ball_navsat_transform::@19d4f88cbaf3b8a5a99b"
+			"id" : "ball_ekf::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ball_ukf::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ball_localization_estimator::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ros_ball_filter_utilities::@19d4f88cbaf3b8a5a99b"
 		}
 	],
-	"id" : "ball_navsat_transform_node::@19d4f88cbaf3b8a5a99b",
+	"id" : "ros_ball_localization_listener::@19d4f88cbaf3b8a5a99b",
 	"install" : 
 	{
 		"destinations" : 
 		[
 			{
 				"backtrace" : 3,
-				"path" : "lib/ball_localization"
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "lib"
 			}
 		],
 		"prefix" : 
@@ -324,11 +343,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "-rdynamic",
+				"fragment" : "",
 				"role" : "flags"
 			},
 			{
@@ -337,12 +352,17 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:",
+				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "../../../devel/lib/libball_navsat_transform.so",
+				"fragment" : "../../../devel/lib/libball_localization_estimator.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../../devel/lib/libros_ball_filter_utilities.so",
 				"role" : "libraries"
 			},
 			{
@@ -517,17 +537,28 @@
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-lGeographic",
+				"backtrace" : 5,
+				"fragment" : "-lyaml-cpp",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "../../../devel/lib/libball_ekf.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "../../../devel/lib/libball_ukf.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "../../../devel/lib/libball_filter_base.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
 				"fragment" : "../../../devel/lib/libball_filter_utilities.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 6,
-				"fragment" : "../../../devel/lib/libros_ball_filter_utilities.so",
 				"role" : "libraries"
 			},
 			{
@@ -700,8 +731,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "ball_navsat_transform_node",
-	"nameOnDisk" : "ball_navsat_transform_node",
+	"name" : "ros_ball_localization_listener",
+	"nameOnDisk" : "libros_ball_localization_listener.so",
 	"paths" : 
 	{
 		"build" : "Dependencies/EKF/ball_localization",
@@ -722,9 +753,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Dependencies/EKF/ball_localization/src/ball_navsat_transform_node.cpp",
+			"path" : "Dependencies/EKF/ball_localization/src/ros_ball_localization_listener.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "SHARED_LIBRARY"
 }

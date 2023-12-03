@@ -268,11 +268,11 @@
 			[
 				{
 					"backtrace" : 32,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
 				},
 				{
 					"backtrace" : 33,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
 				},
 				{
 					"backtrace" : 33,
@@ -370,7 +370,7 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:",
+				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:",
 				"role" : "libraries"
 			},
 			{

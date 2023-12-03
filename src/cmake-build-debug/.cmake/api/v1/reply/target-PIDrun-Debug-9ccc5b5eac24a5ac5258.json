@@ -85,19 +85,19 @@
 			[
 				{
 					"backtrace" : 8,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/run/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/run/include"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/FSM/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/FSM/include"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/robot/include"
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/robot/include"
 				},
 				{
 					"backtrace" : 2,
@@ -148,7 +148,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/lib",
+				"fragment" : "-Wl,-rpath,/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/lib",
 				"role" : "libraries"
 			},
 			{

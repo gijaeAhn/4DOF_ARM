@@ -39,7 +39,6 @@ int main()
     test_robot.setJoint(init_pose);
 
 
-    std::cout << "Debug" << std::endl;
     //Run Threads
     std::thread robotrun(&robot::Robot::run,&test_robot);
     std::thread PIDrun(&robot::robotPositionController::PIDrun,&test_posControl);

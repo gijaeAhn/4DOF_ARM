@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "devel/lib/libros_ball_filter_utilities.so"
+			"path" : "devel/lib/libros_ball_filter.so"
 		}
 	],
 	"backtrace" : 1,
@@ -48,7 +48,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 140,
+				"line" : 141,
 				"parent" : 0
 			},
 			{
@@ -72,7 +72,19 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 159,
+				"line" : 164,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 162,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 161,
 				"parent" : 0
 			},
 			{
@@ -89,81 +101,81 @@
 			},
 			{
 				"file" : 6,
-				"parent" : 7
+				"parent" : 9
 			},
 			{
 				"command" : 7,
 				"file" : 6,
 				"line" : 76,
-				"parent" : 8
-			},
-			{
-				"file" : 5,
-				"parent" : 9
-			},
-			{
-				"command" : 7,
-				"file" : 5,
-				"line" : 197,
 				"parent" : 10
 			},
 			{
-				"file" : 4,
+				"file" : 5,
 				"parent" : 11
 			},
 			{
 				"command" : 7,
-				"file" : 4,
+				"file" : 5,
 				"line" : 197,
 				"parent" : 12
 			},
 			{
-				"file" : 3,
+				"file" : 4,
 				"parent" : 13
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 197,
+				"parent" : 14
+			},
+			{
+				"file" : 3,
+				"parent" : 15
 			},
 			{
 				"command" : 6,
 				"file" : 3,
 				"line" : 222,
-				"parent" : 14
+				"parent" : 16
 			},
 			{
 				"file" : 2,
-				"parent" : 15
+				"parent" : 17
 			},
 			{
 				"command" : 5,
 				"file" : 2,
 				"line" : 12,
-				"parent" : 16
+				"parent" : 18
 			},
 			{
 				"command" : 6,
 				"file" : 6,
 				"line" : 20,
-				"parent" : 8
+				"parent" : 10
 			},
 			{
 				"file" : 8,
-				"parent" : 18
+				"parent" : 20
 			},
 			{
 				"command" : 8,
 				"file" : 8,
 				"line" : 174,
-				"parent" : 19
+				"parent" : 21
 			},
 			{
 				"command" : 5,
 				"file" : 7,
 				"line" : 18,
-				"parent" : 20
+				"parent" : 22
 			},
 			{
 				"command" : 5,
 				"file" : 2,
 				"line" : 8,
-				"parent" : 16
+				"parent" : 18
 			},
 			{
 				"command" : 13,
@@ -175,35 +187,35 @@
 				"command" : 6,
 				"file" : 11,
 				"line" : 307,
-				"parent" : 23
+				"parent" : 25
 			},
 			{
 				"file" : 10,
-				"parent" : 24
+				"parent" : 26
 			},
 			{
 				"command" : 12,
 				"file" : 10,
 				"line" : 63,
-				"parent" : 25
+				"parent" : 27
 			},
 			{
 				"command" : 11,
 				"file" : 9,
 				"line" : 51,
-				"parent" : 26
+				"parent" : 28
 			},
 			{
 				"command" : 10,
 				"file" : 9,
 				"line" : 46,
-				"parent" : 27
+				"parent" : 29
 			},
 			{
 				"command" : 9,
 				"file" : 9,
 				"line" : 63,
-				"parent" : 28
+				"parent" : 30
 			},
 			{
 				"command" : 9,
@@ -225,49 +237,49 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"define" : "EIGEN_MPL2_ONLY"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"define" : "EIGEN_NO_DEBUG"
 				},
 				{
-					"backtrace" : 17,
+					"backtrace" : 19,
 					"define" : "ROSCONSOLE_BACKEND_LOG4CXX"
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 23,
 					"define" : "ROS_BUILD_SHARED_LIBS=1"
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 24,
 					"define" : "ROS_PACKAGE_NAME=\"ball_localization\""
 				},
 				{
-					"define" : "ros_ball_filter_utilities_EXPORTS"
+					"define" : "ros_ball_filter_EXPORTS"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 29,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
+					"backtrace" : 31,
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include"
 				},
 				{
-					"backtrace" : 30,
-					"path" : "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
+					"backtrace" : 32,
+					"path" : "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 32,
 					"path" : "/opt/ros/noetic/include"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 32,
 					"path" : "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 32,
 					"path" : "/usr/include/eigen3"
 				}
 			],
@@ -286,7 +298,30 @@
 			]
 		}
 	],
-	"id" : "ros_ball_filter_utilities::@19d4f88cbaf3b8a5a99b",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "ball_filter_utilities::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ball_filter_base::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ball_ekf::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ball_ukf::@19d4f88cbaf3b8a5a99b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ros_ball_filter_utilities::@19d4f88cbaf3b8a5a99b"
+		}
+	],
+	"id" : "ros_ball_filter::@19d4f88cbaf3b8a5a99b",
 	"install" : 
 	{
 		"destinations" : 
@@ -319,7 +354,22 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/opt/ros/noetic/lib:",
+				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../../devel/lib/libball_ekf.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../../devel/lib/libball_ukf.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../../devel/lib/libros_ball_filter_utilities.so",
 				"role" : "libraries"
 			},
 			{
@@ -492,12 +542,189 @@
 				"backtrace" : 5,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
 				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "../../../devel/lib/libball_filter_base.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "../../../devel/lib/libball_filter_utilities.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libdiagnostic_updater.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libeigen_conversions.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libnodeletlib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libbondcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-luuid",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libclass_loader.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lPocoFoundation",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libroslib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/librospack.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpython3.8",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ltinyxml2",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lorocos-kdl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libtf2_ros.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libactionlib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libmessage_filters.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libroscpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/librosconsole.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/librosconsole_log4cxx.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/librosconsole_backend_interface.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog4cxx",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libxmlrpcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libtf2.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libroscpp_serialization.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/librostime.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/opt/ros/noetic/lib/libcpp_common.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "ros_ball_filter_utilities",
-	"nameOnDisk" : "libros_ball_filter_utilities.so",
+	"name" : "ros_ball_filter",
+	"nameOnDisk" : "libros_ball_filter.so",
 	"paths" : 
 	{
 		"build" : "Dependencies/EKF/ball_localization",
@@ -518,7 +745,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Dependencies/EKF/ball_localization/src/ros_ball_filter_utilities.cpp",
+			"path" : "Dependencies/EKF/ball_localization/src/ros_ball_filter.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
