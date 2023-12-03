@@ -75,7 +75,7 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "/home/sj/Desktop/4DOF_ARM/src/robot/include"
+					"path" : "/home/gj/Desktop/4DOF_ARM/src/robot/include"
 				},
 				{
 					"backtrace" : 6,
@@ -122,7 +122,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/sj/Desktop/4DOF_ARM/src/robot/cmake-build-debug",
+				"fragment" : "-Wl,-rpath,/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug",
 				"role" : "libraries"
 			},
 			{

@@ -6,5 +6,5 @@ CXX_DEFINES = -DFSM_EXPORTS
 
 CXX_INCLUDES = -I/home/gj/Desktop/4DOF_ARM/src/FSM/include
 
-CXX_FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always
+CXX_FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always -Wall -Werror
 

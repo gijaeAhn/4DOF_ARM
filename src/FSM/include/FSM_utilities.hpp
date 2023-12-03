@@ -10,10 +10,9 @@ namespace fsm{
 struct Transition {
     fsm::State currentState;
     std::string event;
-    fsm::State nextState;
 
-    Transition(fsm::State current, const std::string& evt, fsm::State next)
-        : currentState(current), event(evt), nextState(next) {}
+    Transition(fsm::State current, const std::string& evt)
+        : currentState(current), event(evt){}
 };
 
 

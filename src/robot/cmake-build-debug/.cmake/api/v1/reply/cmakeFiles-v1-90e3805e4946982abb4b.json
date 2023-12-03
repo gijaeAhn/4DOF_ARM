@@ -187,8 +187,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/sj/Desktop/4DOF_ARM/src/robot/cmake-build-debug",
-		"source" : "/home/sj/Desktop/4DOF_ARM/src/robot"
+		"build" : "/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug",
+		"source" : "/home/gj/Desktop/4DOF_ARM/src/robot"
 	},
 	"version" : 
 	{

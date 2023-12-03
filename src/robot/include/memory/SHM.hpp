@@ -14,7 +14,7 @@
 #define  GRAVITY_COMPENSATION_KEY   1002
 #define  ANGLE_KEY                  1003
 #define  VEL_KEY                    1004
-#define  ROBOT_MEM_SIZE 2
+#define  ROBOT_MEM_SIZE 3
 #define MOTORINIT_TIME   5
 
 namespace memory{
@@ -123,7 +123,7 @@ namespace memory{
             return 1;
         }
         
-        memcpy(smemory, (T *)SHMaddr, sizeof(smemory));
+        memcpy(smemory, (T *)SHMaddr, SHM_size);
         
         if(shmdt(SHMaddr) == -1)
         {

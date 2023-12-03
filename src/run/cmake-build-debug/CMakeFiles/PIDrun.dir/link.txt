@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/PIDrun.dir/src/PIDrun.cc.o -o PIDrun  -lrobot -lpthread 

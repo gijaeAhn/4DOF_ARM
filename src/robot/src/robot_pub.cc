@@ -49,6 +49,7 @@ int main()
     getSHM_PID.SHM_CREATE();
     getSHM_GRAV.SHM_CREATE();
     setSHM_ANGLE.SHM_CREATE();
+    setSHM_VEL.SHM_CREATE();
 
 
 
@@ -59,15 +60,15 @@ int main()
         driver.MotorRunning(i+1);
         myactuator_rmd::Feedback buf {driver.sendTorqueSetpoint(i+1,0)};
         previousShaft[i] = buf.shaft_angle;
-        ang_buffer[i] = 0;
         vel_buffer[i] = 0;
         shaftChange[i] = 0;
         sleep(MOTORINIT_TIME);
     }
 
+    setSHM_ANGLE.SHM_READ(ang_buffer);
+
 
     int iteration = 0;
-    setSHM_ANGLE.SHM_WRITE(ang_buffer);
 
     while(true){
         iteration ++;
@@ -78,7 +79,7 @@ int main()
         
             for(int iter =0; iter < ROBOT_MEM_SIZE; iter++)
             {
-                sum_buffer[iter] = std::max(myactuator_rmd::max_current, std::min(pid_buffer[iter] + grav_buffer[iter] , -myactuator_rmd::max_current));
+                sum_buffer[iter] = std::min(myactuator_rmd::max_current, std::max(pid_buffer[iter] + grav_buffer[iter] , -myactuator_rmd::max_current));
                 buf_feed[iter] = driver.sendTorqueSetpoint(iter+1,sum_buffer[iter]);
                 currentShaft[iter] = buf_feed[iter].shaft_angle;
 
@@ -95,8 +96,8 @@ int main()
                 }
 
                 previousShaft[iter] = currentShaft[iter];
-                vel_buffer[iter] = shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle)/timer.dt_;
-                ang_buffer[iter] += shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle);
+                vel_buffer[iter] = -(static_cast<float>((shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle))/timer.dt_));
+                ang_buffer[iter] += -(static_cast<float>(shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle)));
             }
 
 
@@ -105,8 +106,8 @@ int main()
         setSHM_VEL.SHM_WRITE(vel_buffer);
 
         if(iteration %300 ==0){
-            printf("Current Shaft : %d , %d, %d \n", currentShaft[0], currentShaft[1],currentShaft[2]);
-            printf(2"Current Joint Velocities : %f %f %f \n", vel_buffer[0] , vel_buffer[1] , vel_buffer[2] );
+            printf("Current Angle : %f , %f, %f \n", ang_buffer[0], ang_buffer[1],ang_buffer[2]);
+            printf("Current Joint Velocities : %f %f %f \n", vel_buffer[0] , vel_buffer[1] , vel_buffer[2] );
         }
 
     }

@@ -53,6 +53,16 @@ void Robot::showCurrentJoint(){
     printf("\033[0m");
 }
 
+void Robot::showCurrentJointV(){
+    printf("\033[0;32m");
+    printf(" Current Joint Angle :");
+    for(auto joint : jointVelocity_){
+        printf("%f ",joint );
+    }
+    printf("\n");
+    printf("\033[0m");
+}
+
 
 
 
@@ -60,6 +70,16 @@ void Robot::showCurrentJoint(){
 void Robot::setMotor(Motor motor){
     MotorList_.push_back(motor);
     motorConstant_.push_back(motor.motorConstant);
+}
+
+void Robot::setJoint(std::vector<float> position){
+    for (int i = 0; i < ROBOT_MEM_SIZE; i++) {
+        Amemory[i] = position[i];
+    }
+    printf("%f %f %f ", Amemory[0], Amemory[1], Amemory[2]);
+    ANGLE_SHM.SHM_WRITE(Amemory);
+
+
 }
 
 void Robot::getJoint(){
@@ -91,6 +111,8 @@ void Robot::run(){
         timer.wait();
         getJoint();
         getJointV();
+        showCurrentJoint();
+        showCurrentJointV();
     }
 
 }

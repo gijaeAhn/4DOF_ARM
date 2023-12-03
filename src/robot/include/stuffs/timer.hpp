@@ -19,7 +19,7 @@ struct Timer{
     double dt_;
 
     Timer()
-    : actualFrequency_(200), dt_(0.003), interval_(3){}
+    : actualFrequency_(200), dt_(0.003), interval_(5){}
     Timer(int actual , double dt)
     : actualFrequency_(actual), dt_(dt) {}
 

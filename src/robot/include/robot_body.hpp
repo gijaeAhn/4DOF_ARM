@@ -57,7 +57,9 @@ using MotorList = std::vector<Motor>;
 
 
         void showCurrentJoint();
+        void showCurrentJointV();
         void setMotor(Motor motor);
+        void setJoint(std::vector<float> position);
         void getJoint();
         void getJointV();
         void run();

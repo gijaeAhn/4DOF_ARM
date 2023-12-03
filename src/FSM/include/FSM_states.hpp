@@ -5,7 +5,7 @@ namespace fsm {
 enum class State {
     INIT_STATE,
     MOTION_STATE,
-    IMPEDENCE_STATE,
+    IMPEDANCE_STATE,
     GRAVITY_COMPENSATION_STATE
     // Add more states as needed
 };

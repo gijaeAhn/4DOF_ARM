@@ -1,6 +1,6 @@
 // FSM_body.h
-#ifndef FSM_BODY_H
-#define FSM_BODY_H
+#ifndef FSM_H
+#define FSM_H
 
 #include "FSM_utilities.hpp"
 #include "FSM_states.hpp"
@@ -10,7 +10,7 @@ namespace fsm {
 class FSM {
 private:
     State currentState;
-    std::map<State, TransitionKey> transitions;
+    std::map<TransitionKey,State> transitions;
 
 public:
     FSM();
@@ -20,4 +20,4 @@ public:
 
 }
 
-#endif // FSM_BODY_H
+#endif // FSM_H

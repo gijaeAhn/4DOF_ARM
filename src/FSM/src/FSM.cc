@@ -4,11 +4,16 @@
 namespace fsm{
 FSM::FSM() {
     // Initialize the FSM with a starting state
-    State state_;
+    currentState = State::INIT_STATE;
 
     // Define state transitions
-    transitions[TransitionKey{State::INIT_STATE, "EventA"}] = State::MOTION_STATE;
-    transitions[TransitionKey{State::INIT_STATE, "EventB"}] = State::IMPEDENCE_STATE;
+    transitions[TransitionKey{State::INIT_STATE, "Move"}] = State::MOTION_STATE;
+    transitions[TransitionKey{State::INIT_STATE, "Impedance"}] = State::IMPEDANCE_STATE;
+    transitions[TransitionKey{State::MOTION_STATE, "Stop"}] = State::INIT_STATE;
+    transitions[TransitionKey{State::MOTION_STATE, "Imepdance"}] = State::IMPEDANCE_STATE;
+    transitions[TransitionKey{State::IMPEDANCE_STATE, "Stop"}] = State::INIT_STATE;
+    transitions[TransitionKey{State::IMPEDANCE_STATE, "Move"}] = State::MOTION_STATE;
+
     // Add more transitions as necessary
 }
 
