@@ -96,9 +96,23 @@ int main()
                 }
 
                 previousShaft[iter] = currentShaft[iter];
-                vel_buffer[iter] = -(static_cast<float>((shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle))/timer.dt_));
-                ang_buffer[iter] += -(static_cast<float>(shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle)));
-            }
+                if(iter == 0 || iter == 1) {
+                    vel_buffer[iter] = -(static_cast<float>(
+                            (shaftChange[iter] / (myactuator_rmd::maxShaftAngle) * (myactuator_rmd::X8_SHAFTCYCLE)) /
+                            timer.dt_));
+                    ang_buffer[iter] += -(static_cast<float>(
+                            shaftChange[iter] / (myactuator_rmd::maxShaftAngle) *  (myactuator_rmd::X8_SHAFTCYCLE)));
+                }
+                else {
+                    vel_buffer[iter] = -(static_cast<float>(
+                            (shaftChange[iter] / (myactuator_rmd::maxShaftAngle) * (myactuator_rmd::X6_SHAFTCYCLE)) /
+                            timer.dt_));
+                    ang_buffer[iter] += -(static_cast<float>(
+                            shaftChange[iter] / (myactuator_rmd::maxShaftAngle) *  (myactuator_rmd::X6_SHAFTCYCLE)));
+                }
+
+                }
+
 
 
 
