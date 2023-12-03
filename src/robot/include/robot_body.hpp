@@ -17,7 +17,15 @@
 
 namespace robot {
 
-using JointStates = std::vector<double>;
+    typedef struct Jointstate {
+
+
+        double position;
+        double velocity;
+    }Jointstate;
+
+
+using JointStates = std::vector<Jointstate>;
 using MotorList = std::vector<Motor>;
 
 
@@ -26,21 +34,20 @@ using MotorList = std::vector<Motor>;
 
     class Robot {
         friend class robotPositionController;
+        friend class robotGravityCompensation;
         protected :
         
-        JointStates jointStates_;
+        std::vector<double> jointPosition_;
+        std::vector<double> jointVelocity_;
+        std::vector<double> motorConstant_;
         MotorList MotorList_;
         fsm::FSM fsm_;
         myactuator_rmd::Driver* driver_;
-        memory::SHM<float> robot_SHM;
-        float smemory[ROBOT_MEM_SIZE];
-    
+        memory::SHM<float> ANGLE_SHM;
+        memory::SHM<float> VEL_SHM;
+        float Amemory[ROBOT_MEM_SIZE];
+        float Vmemory[ROBOT_MEM_SIZE];
 
-
-        
-
-      
-        
 
 
         public :
@@ -49,10 +56,10 @@ using MotorList = std::vector<Motor>;
         Robot(Robot&& other) noexcept;       
 
 
-        void showCurrentJoint(); 
-        void setJoint(std::vector<double> joint);
+        void showCurrentJoint();
         void setMotor(Motor motor);
         void getJoint();
+        void getJointV();
         void run();
 
     };

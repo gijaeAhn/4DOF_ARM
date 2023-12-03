@@ -17,10 +17,6 @@ RobotBuilder& RobotBuilder::buildJoint(Motor motor){
     return *this;
 }
 
-// RobotBuilder& RobotBuilder::buildSystem(myactuator_rmd::Driver* driver){
-//     robot_.setDriver(driver);
-//     return *this;
-// }
 
 Robot RobotBuilder::build(){
     return std::move(robot_);
@@ -28,3 +24,8 @@ Robot RobotBuilder::build(){
 }
 
 #endif
+
+// RobotBuilder& RobotBuilder::buildSystem(myactuator_rmd::Driver* driver){
+//     robot_.setDriver(driver);
+//     return *this;
+// }

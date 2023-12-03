@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/cmake-build-debug/devel/setup.sh

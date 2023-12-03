@@ -25,24 +25,15 @@ class robotPositionController {
         Robot* robot_;
         memory::SHM<float> PID_SHM;
         float signal[ROBOT_MEM_SIZE];
+        float real_signal[ROBOT_MEM_SIZE];
         std::vector<std::thread> controlThreads_;
 
-   
-        
-        
-        const float errorThreshold = 0.01;        
         float proportionalGain;
         float integralGain;
         float derivativeGain;
-        
 
 
-        
 
-
-        
-
-        
 
     public:
 
@@ -57,13 +48,7 @@ class robotPositionController {
 
         void PIDrun();
 
-        void robotrun();
 
-
-    
         
 };
-
-
-
 }

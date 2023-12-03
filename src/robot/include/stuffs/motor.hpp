@@ -10,10 +10,11 @@ namespace robot {
 
 struct Motor {
     std::string motor_type; 
-    int motor_id;           
+    int motor_id;
+    int motorConstant;
 
     
-    Motor(const std::string& type, int id) : motor_type(type), motor_id(id) {}
+    Motor(const std::string& type, int id, int motorconstant) : motor_type(type), motor_id(id), motorConstant(motorconstant) {}
 
     // Default Constructor
     Motor() : motor_type(""), motor_id(-1) {}

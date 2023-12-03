@@ -12,7 +12,7 @@
 #include "robot_builder.hpp"
 #include "stuffs/motor.hpp"
 #include "controller/robot_positionController.hpp"
-
+#include "controller/robot_gravityComensation.hpp"
 
 
 
@@ -20,31 +20,39 @@
 int main()
 {
 
-    robot::Motor motor1{"RMD",1};
-    robot::Motor motor2{"RMD",2};
+    robot::Motor motor1{"RMD",1,myactuator_rmd::X8_CONST};
+    robot::Motor motor2{"RMD",2,myactuator_rmd::X8_CONST};
+    robot::Motor motor3{"RMD",3,myactuator_rmd::X6_CONST};
 
     //Build Robot
     robot::RobotBuilder test_builder;
     robot::Robot test_robot(test_builder
                               .buildJoint(motor1)
                               .buildJoint(motor2)
+                              .buildJoint(motor3)
                               .build());
-    robot::robotPositionController test_posControl(0.000001,0.0000,0.00001, &test_robot);
 
+    robot::robotPositionController test_posControl(30,30,1, &test_robot);
+    robot::robotGravityCompensation test_grav(&test_robot);
 
-
+    
 
     //Run Threads
     std::thread robotrun(&robot::Robot::run,&test_robot);
-    std::thread PID_run(&robot::robotPositionController::PIDrun, &test_posControl);
-    robotrun.join();
-    PID_run.join();
-    
+    std::thread PIDrun(&robot::robotPositionController::PIDrun,&test_posControl);
+    std::thread GRAVrun(&robot::robotGravityCompensation::GCOMPrun,&test_grav);
 
+    sleep(MOTORINIT_TIME);
+    sleep(MOTORINIT_TIME);
 
     //Control Position
-    std::vector<double> setpoint = {180,180};
+    std::vector<double> setpoint = {0,0,90};
     test_posControl.PIDcontrol(setpoint);
+
+
+    robotrun.join();
+    PIDrun.join();
+    GRAVrun.join();
     
 
 }

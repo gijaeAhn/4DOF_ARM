@@ -1,4 +1,5 @@
 #include "controller/robot_positionController.hpp"
+#define DEGREE_2_RADIAN 0.0174532925
 
 
 
@@ -9,18 +10,14 @@ namespace robot{
         robotPositionController::robotPositionController(float pGain, float iGain,float dGain,Robot* robot) 
         :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain), robot_(robot), PID_SHM(PID_CONTROL_KEY,ROBOT_MEM_SIZE)
         {  
-            PID_SHM.SHM_INIT();
+            PID_SHM.SHM_GETID();
             for ( int i =0; i <ROBOT_MEM_SIZE; i++){
                 signal[i] =0;
             }
         }
 
         robotPositionController::~robotPositionController()
-        {   
-            PID_SHM.SHM_FREE();
-            
-        
-        }
+        {}
 
         
 
@@ -28,6 +25,8 @@ namespace robot{
 
         void robotPositionController::PIDcontrol(std::vector<double> setpoint)
         {
+
+            std::cout<<"PID CONTROL" << std::endl;
             // int iteration = 0;
    
             // const size_t dimension = actuator_id.size();
@@ -113,41 +112,68 @@ namespace robot{
             {
                 controlThreads_.emplace_back(&robot::robotPositionController::singleMotorControl,this,robot_->MotorList_[it],setpoint[it]);
             }
+             std::cout << "Debug 5" << std::endl;
+
 
             for (auto& thread : controlThreads_){
                 thread.join();
             }
+            std::cout << "Debug 6" << std::endl;
+
+            sleep(3);
+            robot_->showCurrentJoint();
+
         }
 
     void robotPositionController::singleMotorControl(Motor motor, double setpoint){
-            int iteration = 0;
-            double controlSignal =0;
+            
 
-            if(motor.motor_type == "RMD"){
+            // RMD MOTOR PID CONTROL
+            if(motor.motor_type == static_cast<std::string>("RMD")){
+                int iteration = 0;
+                double controlSignal =0;
+                double current_position =0;
+                double error = 0;
+                const double errorThreshold = 0.01;
+                const double overshootThreshold = 0.1;
+
+                
+
+
+
+                
                 PID_ERROR pid_error(0,0,0,0);
                 Timer pid_timer;    
                 pid_timer.start();
                 pid_timer.stop();
                 pid_timer.next_execution = std::chrono::steady_clock::now();
 
+
                 do{ 
                     pid_timer.wait();
+                    double currentPosition = robot_->jointPosition_[motor.motor_id - 1];
+                    double error = (setpoint - currentPosition) * DEGREE_2_RADIAN;
+                    double ivalue = pid_timer.dt_ * error; 
+                    double deriva = (error - pid_error.error_) / pid_timer.dt_; 
+                    pid_error.setError(error, ivalue, deriva);
+                    
+                    controlSignal = proportionalGain *      pid_error.error_ +
+                                    integralGain     *      pid_error.integralError_ +
+                                    derivativeGain   *      pid_error.derivativeError_;
 
-                    double buf_error = setpoint - robot_->jointStates_[motor.motor_id-1];
-                    pid_error.previousError_ = pid_error.error_;
-                    pid_error.setError(buf_error ,buf_error, (buf_error - pid_error.previousError_)/pid_timer.dt_);
+                                   
 
-                    if(pid_error.error_ < errorThreshold){
-                        controlSignal =0;
-                    }
-                    else{
-                    controlSignal = proportionalGain * pid_error.error_ + integralGain * pid_error.integralError_ + derivativeGain * pid_error.derivativeError_;
-                    }
                     signal[motor.motor_id-1] = controlSignal;
+                    real_signal[motor.motor_id-1] = controlSignal/motor.motorConstant;
+                    if(iteration % 300 ==0){
+                    printf("Motor ID :%d , Posotion : %f,  Signal : %lf\n",motor.motor_id,robot_->jointPosition_[motor.motor_id-1] ,controlSignal);
+                    robot_->showCurrentJoint();}
                     iteration++;
-                }while((controlSignal ==0));
+                // }while((std::abs(pid_error.error_) > errorThreshold)&& (controlSignal > 1e-3));
+                }while(true);
 
             }
+            // RMD CONTROL PID END
 
 
     }
@@ -158,13 +184,11 @@ namespace robot{
         timer.next_execution = std::chrono::steady_clock::now();
         while(true){
             timer.wait();
-            PID_SHM.SHM_WRITE(signal);
+
+            PID_SHM.SHM_WRITE(real_signal);
         }
     }
 
-    void robotPositionController::robotrun(){
-        robot_->run();
-    }
     
         
 }

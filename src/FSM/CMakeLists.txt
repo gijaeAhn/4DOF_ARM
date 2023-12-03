@@ -12,16 +12,16 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
-  ${CMAKE_CURRENT_SOURCE_DIR}/*.cc
-)
+#file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
+#  ${CMAKE_CURRENT_SOURCE_DIR}/*.cc
+#)
 
-add_library(FSM SHARED ${SRC_FILES})
-
-
-target_include_directories(FSM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-# target_compile_options(FSM PRIVATE -Wall -Werror)
-target_compile_features(FSM PRIVATE cxx_std_17)
+#add_library(FSM SHARED ${SRC_FILES})
+#
+#
+#target_include_directories(FSM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+## target_compile_options(FSM PRIVATE -Wall -Werror)
+#target_compile_features(FSM PRIVATE cxx_std_17)
 
 
 # include(FetchContent)

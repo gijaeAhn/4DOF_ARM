@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="driver"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Myactuator\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\.local\;CMake Files\..\..\..\..\..\.local\lib\;CMake Files\..\..\..\..\..\.local\lib\python3.8\;CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\;CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\;CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\;CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\;CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\pybind11\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="myactuator_rmd">
+				<Option output="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/libmyactuator_rmd.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 myactuator_rmd"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="myactuator_rmd/fast">
+				<Option output="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/libmyactuator_rmd.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 myactuator_rmd/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/cmake-build-debug/Myactuator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include/myactuator_rmd/motorInfo.hpp">
+			<Option target="myactuator_rmd"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/src/can/node.cpp">
+			<Option target="myactuator_rmd"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/src/can/utilities.cpp">
+			<Option target="myactuator_rmd"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/src/driver.cpp">
+			<Option target="myactuator_rmd"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/src/protocol/requests.cpp">
+			<Option target="myactuator_rmd"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/src/protocol/responses.cpp">
+			<Option target="myactuator_rmd"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Myactuator\"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/../../../../../.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/../../../../../.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/../../../../../.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/../../../../../.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11NewTools.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/../../../../../.local/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\.local\lib\python3.8\site-packages\pybind11\share\cmake\pybind11\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

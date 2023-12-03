@@ -7,28 +7,26 @@
 #include <vector>
 #include <iostream>
 #include <csignal>
-
-#define MOTORINIT_TIME   5
-
+#include <algorithm>
 
 
 
 memory::SHM<float> getSHM_PID(PID_CONTROL_KEY,ROBOT_MEM_SIZE);
 memory::SHM<float> getSHM_GRAV(GRAVITY_COMPENSATION_KEY,ROBOT_MEM_SIZE);
 memory::SHM<float> setSHM_ANGLE(ANGLE_KEY,ROBOT_MEM_SIZE);
+memory::SHM<float> setSHM_VEL(VEL_KEY,ROBOT_MEM_SIZE);
 
 
-void signalHandler(int signum)
-{
-    std::cout << "Interrupt signal (" << signum << " ) recieved.\n" << std::endl; 
-    getSHM_PID.SHM_FREE();
-    getSHM_GRAV.SHM_FREE();
-    setSHM_ANGLE.SHM_FREE();
-}
+
+void signalHandler(int signum);
+
 
 int main()
 {
     signal(SIGINT, signalHandler);
+
+
+
     robot::Timer timer;
     timer.next_execution = std::chrono::steady_clock::now();
     myactuator_rmd::Driver driver("can0");
@@ -42,17 +40,18 @@ int main()
     float grav_buffer[ROBOT_MEM_SIZE];
     float sum_buffer[ROBOT_MEM_SIZE];
     float ang_buffer[ROBOT_MEM_SIZE];
+    float vel_buffer[ROBOT_MEM_SIZE];
+    float shaftChange[ROBOT_MEM_SIZE];
 
-    float shaftChange =0;
+ 
 
-    getSHM_PID.SHM_INIT();
+
     getSHM_PID.SHM_CREATE();
-
-    getSHM_GRAV.SHM_INIT();
     getSHM_GRAV.SHM_CREATE();
-
-    setSHM_ANGLE.SHM_INIT();
     setSHM_ANGLE.SHM_CREATE();
+
+
+
 
     for(int i =0; i<ROBOT_MEM_SIZE ; i++)
     {
@@ -60,42 +59,66 @@ int main()
         driver.MotorRunning(i+1);
         myactuator_rmd::Feedback buf {driver.sendTorqueSetpoint(i+1,0)};
         previousShaft[i] = buf.shaft_angle;
-        ang_buffer[i] =0;
+        ang_buffer[i] = 0;
+        vel_buffer[i] = 0;
+        shaftChange[i] = 0;
         sleep(MOTORINIT_TIME);
     }
 
+
+    int iteration = 0;
     setSHM_ANGLE.SHM_WRITE(ang_buffer);
 
-    
     while(true){
+        iteration ++;
         timer.wait();
         getSHM_PID.SHM_READ(pid_buffer);
-        getSHM_PID.SHM_READ(grav_buffer);
+        getSHM_GRAV.SHM_READ(grav_buffer);
+
         
             for(int iter =0; iter < ROBOT_MEM_SIZE; iter++)
             {
-                sum_buffer[iter] = std::max(-20.0f, std::min(pid_buffer[iter] + grav_buffer[iter], 20.0f));
+                sum_buffer[iter] = std::max(myactuator_rmd::max_current, std::min(pid_buffer[iter] + grav_buffer[iter] , -myactuator_rmd::max_current));
                 buf_feed[iter] = driver.sendTorqueSetpoint(iter+1,sum_buffer[iter]);
                 currentShaft[iter] = buf_feed[iter].shaft_angle;
 
-                if (currentShaft[iter] - previousShaft[iter] > 40000) {
-                    shaftChange = -((myactuator_rmd::maxShaftAngle - currentShaft[iter]) + previousShaft[iter]);
+
+                if (currentShaft[iter] - previousShaft[iter] > 50000) {
+                    shaftChange[iter] = -((myactuator_rmd::maxShaftAngle - currentShaft[iter]) + previousShaft[iter]);
                 }
-                if (currentShaft[iter] - previousShaft[iter] < -40000) {
-                    shaftChange = currentShaft[iter] + (myactuator_rmd::maxShaftAngle - previousShaft[iter]);
+                else if (currentShaft[iter] - previousShaft[iter] < -50000) {
+                    shaftChange[iter] = currentShaft[iter] + (myactuator_rmd::maxShaftAngle - previousShaft[iter]);
                 }
                 else
                 {
-                    shaftChange = currentShaft[iter] - previousShaft[iter];
+                    shaftChange[iter] = currentShaft[iter] - previousShaft[iter];
                 }
 
-                ang_buffer[iter] += shaftChange/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle);
+                previousShaft[iter] = currentShaft[iter];
+                vel_buffer[iter] = shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle)/timer.dt_;
+                ang_buffer[iter] += shaftChange[iter]/(myactuator_rmd::maxShaftAngle)*(myactuator_rmd::oneShaftCycle);
             }
 
+
+
         setSHM_ANGLE.SHM_WRITE(ang_buffer);
+        setSHM_VEL.SHM_WRITE(vel_buffer);
+
+        if(iteration %300 ==0){
+            printf("Current Shaft : %d , %d, %d \n", currentShaft[0], currentShaft[1],currentShaft[2]);
+            printf(2"Current Joint Velocities : %f %f %f \n", vel_buffer[0] , vel_buffer[1] , vel_buffer[2] );
+        }
 
     }
 
     return 0;
     
+}
+
+void signalHandler(int signum)
+{
+    std::cout << "Interrupt signal (" << signum << " ) recieved.\n" << std::endl; 
+    getSHM_PID.SHM_FREE();
+    getSHM_GRAV.SHM_FREE();
+    setSHM_ANGLE.SHM_FREE();
 }

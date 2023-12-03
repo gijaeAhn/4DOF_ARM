@@ -10,7 +10,7 @@ namespace fsm {
 class FSM {
 private:
     State currentState;
-    std::map<TransitionKey, State> transitions;
+    std::map<State, TransitionKey> transitions;
 
 public:
     FSM();
