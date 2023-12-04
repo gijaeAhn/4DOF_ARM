@@ -1,3 +1,0 @@
-/home/gj/Desktop/4DOF_ARM/src/FSM/cmake-build-debug/CMakeFiles/FSM.dir
-/home/gj/Desktop/4DOF_ARM/src/FSM/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gj/Desktop/4DOF_ARM/src/FSM/cmake-build-debug/CMakeFiles/rebuild_cache.dir

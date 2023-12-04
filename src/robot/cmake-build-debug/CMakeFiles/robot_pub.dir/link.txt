@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/robot_pub.dir/src/robot_pub.cc.o -o robot_pub  -Wl,-rpath,/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug -lFSM -lmyactuator_rmd librobot.so -lFSM -lmyactuator_rmd -lpthread 

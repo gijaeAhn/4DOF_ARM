@@ -1,4 +1,0 @@
-/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" -S /home/gj/Desktop/4DOF_ARM/src/FSM -B /home/gj/Desktop/4DOF_ARM/src/FSM/cmake-build-debug
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/gj/Desktop/4DOF_ARM/src/FSM/cmake-build-debug
