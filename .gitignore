@@ -2,4 +2,4 @@ build/
 myactuator_rmd.egg-info/
 .vscode/
 devel/
-**/cmake-build-debug/
+src/**/cmake-build-debug/
