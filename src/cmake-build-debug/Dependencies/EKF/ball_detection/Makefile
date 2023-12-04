@@ -57,10 +57,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection//CMakeFiles/progress.marks
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection//CMakeFiles/progress.marks
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/clean
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ _catkin_empty_exported_target: Dependencies/EKF/ball_detection/CMakeFiles/_catki
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -200,7 +200,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

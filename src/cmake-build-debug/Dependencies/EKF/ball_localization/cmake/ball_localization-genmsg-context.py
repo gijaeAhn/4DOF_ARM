@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/GetState.srv;/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetDatum.srv;/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetPose.srv;/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetUTMZone.srv;/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToggleFilterProcessing.srv;/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/FromLL.srv;/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToLL.srv"
+services_str = "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/GetState.srv;/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetDatum.srv;/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetPose.srv;/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetUTMZone.srv;/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToggleFilterProcessing.srv;/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/FromLL.srv;/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToLL.srv"
 pkg_name = "ball_localization"
 dependencies_str = "geographic_msgs;geometry_msgs;std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

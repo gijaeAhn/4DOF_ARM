@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc" "robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.o" "gcc" "robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.o.d"
+  "/home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc" "robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.o" "gcc" "robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

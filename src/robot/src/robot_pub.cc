@@ -79,8 +79,14 @@ int main()
         
             for(int iter =0; iter < ROBOT_MEM_SIZE; iter++)
             {
+
                 sum_buffer[iter] = std::min(myactuator_rmd::max_current, std::max(pid_buffer[iter] + grav_buffer[iter] , -myactuator_rmd::max_current));
-                buf_feed[iter] = driver.sendTorqueSetpoint(iter+1,sum_buffer[iter]);
+                if(iter == 0 || iter == 1){
+                    buf_feed[iter] = driver.sendTorqueSetpoint(iter+1,-sum_buffer[iter]);
+                }
+                else {
+                    buf_feed[iter] = driver.sendTorqueSetpoint(iter + 1, sum_buffer[iter]);
+                }
                 currentShaft[iter] = buf_feed[iter].shaft_angle;
 
 
@@ -97,10 +103,10 @@ int main()
 
                 previousShaft[iter] = currentShaft[iter];
                 if(iter == 0 || iter == 1) {
-                    vel_buffer[iter] = (static_cast<float>(
+                    vel_buffer[iter] = -(static_cast<float>(
                             (shaftChange[iter] / (myactuator_rmd::maxShaftAngle) * (myactuator_rmd::X8_SHAFTCYCLE)) /
                             timer.dt_));
-                    ang_buffer[iter] += (static_cast<float>(
+                    ang_buffer[iter] += -(static_cast<float>(
                             shaftChange[iter] / (myactuator_rmd::maxShaftAngle) *  (myactuator_rmd::X8_SHAFTCYCLE)));
                 }
                 else {
@@ -114,7 +120,9 @@ int main()
                 }
 
 
-
+        printf("Sum buffer : %f %f %f\n", sum_buffer[0],sum_buffer[1],sum_buffer[2] );
+        printf("GRAV buffer : %f %f %f\n", grav_buffer[0],grav_buffer[1],grav_buffer[2] );
+        printf("PID buffer : %f %f %f\n", pid_buffer[0],pid_buffer[1],pid_buffer[2] );
 
         setSHM_ANGLE.SHM_WRITE(ang_buffer);
         setSHM_VEL.SHM_WRITE(vel_buffer);

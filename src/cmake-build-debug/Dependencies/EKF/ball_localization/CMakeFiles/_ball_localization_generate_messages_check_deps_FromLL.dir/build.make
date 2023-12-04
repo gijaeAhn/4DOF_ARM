@@ -53,10 +53,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 # Utility rule file for _ball_localization_generate_messages_check_deps_FromLL.
 
@@ -67,7 +67,7 @@ include Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generat
 include Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/progress.make
 
 Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ball_localization /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/FromLL.srv geographic_msgs/GeoPoint:geometry_msgs/Point
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ball_localization /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/FromLL.srv geometry_msgs/Point:geographic_msgs/GeoPoint
 
 _ball_localization_generate_messages_check_deps_FromLL: Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL
 _ball_localization_generate_messages_check_deps_FromLL: Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/build.make
@@ -78,10 +78,10 @@ Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messag
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/build
 
 Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -P CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/cmake_clean.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -P CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/cmake_clean.cmake
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/clean
 
 Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sj/Desktop/4DOF_ARM/src /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gj/Desktop/4DOF_ARM/src /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/_ball_localization_generate_messages_check_deps_FromLL.dir/depend
 

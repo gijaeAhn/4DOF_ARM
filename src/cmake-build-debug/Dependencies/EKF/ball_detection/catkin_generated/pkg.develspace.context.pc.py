@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ball_detection"
-PROJECT_SPACE_DIR = "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel"
 PROJECT_VERSION = "3.1.0"

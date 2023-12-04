@@ -7,9 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PYTHONPATH="/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/python3/dist-packages:$PYTHONPATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/sj/Desktop/4DOF_ARM/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
+export PATH='/opt/ros/noetic/bin:/home/gj/vcpkg:/home/gj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/clion/250/bin/ninja/linux/x64'
+export PKG_CONFIG_PATH="/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PYTHONPATH="/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/gj/Desktop/4DOF_ARM/src:$ROS_PACKAGE_PATH"

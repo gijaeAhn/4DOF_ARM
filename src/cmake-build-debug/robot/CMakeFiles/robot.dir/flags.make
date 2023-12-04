@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -Drobot_EXPORTS
 
-CXX_INCLUDES = -I/home/sj/Desktop/4DOF_ARM/src/robot/include -I/home/sj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include -I/home/sj/Desktop/4DOF_ARM/src/FSM/include -I/usr/include/eigen3
+CXX_INCLUDES = -I/home/gj/Desktop/4DOF_ARM/src/robot/include -I/home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator/include -I/home/gj/Desktop/4DOF_ARM/src/FSM/include -I/usr/include/eigen3
 
 CXX_FLAGS = -g -std=gnu++17 -fPIC -fdiagnostics-color=always
 

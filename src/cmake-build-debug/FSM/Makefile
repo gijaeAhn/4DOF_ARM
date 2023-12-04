@@ -57,10 +57,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/FSM//CMakeFiles/progress.marks
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/FSM//CMakeFiles/progress.marks
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/clean
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 FSM/CMakeFiles/FSM.dir/rule:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/CMakeFiles/FSM.dir/rule
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM/CMakeFiles/FSM.dir/rule
 .PHONY : FSM/CMakeFiles/FSM.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ FSM: FSM/CMakeFiles/FSM.dir/rule
 
 # fast build rule for target.
 FSM/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/build
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/build
 .PHONY : FSM/fast
 
 src/FSM.o: src/FSM.cc.o
@@ -181,7 +181,7 @@ src/FSM.o: src/FSM.cc.o
 
 # target to build an object file
 src/FSM.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/src/FSM.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/src/FSM.cc.o
 .PHONY : src/FSM.cc.o
 
 src/FSM.i: src/FSM.cc.i
@@ -189,7 +189,7 @@ src/FSM.i: src/FSM.cc.i
 
 # target to preprocess a source file
 src/FSM.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/src/FSM.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/src/FSM.cc.i
 .PHONY : src/FSM.cc.i
 
 src/FSM.s: src/FSM.cc.s
@@ -197,7 +197,7 @@ src/FSM.s: src/FSM.cc.s
 
 # target to generate assembly for a file
 src/FSM.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/src/FSM.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f FSM/CMakeFiles/FSM.dir/build.make FSM/CMakeFiles/FSM.dir/src/FSM.cc.s
 .PHONY : src/FSM.cc.s
 
 # Help Target
@@ -227,7 +227,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

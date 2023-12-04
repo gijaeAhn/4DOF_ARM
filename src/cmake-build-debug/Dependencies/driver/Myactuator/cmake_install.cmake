@@ -1,4 +1,4 @@
-# Install script for directory: /home/sj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator
+# Install script for directory: /home/gj/Desktop/4DOF_ARM/src/Dependencies/driver/Myactuator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
