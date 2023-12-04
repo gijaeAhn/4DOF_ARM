@@ -28,10 +28,10 @@ namespace robot{
         signal[1] = 2.13738 * ::sin(angle[1]*DEGREE_2_RADIAN) + 1.27838156 * ::sin((angle[1] + angle[2])*DEGREE_2_RADIAN);
         signal[2] = 1.27838156 * ::sin((angle[1]+ angle[2])*DEGREE_2_RADIAN);
 
-        real_siganl[1] =   signal[1] / robot_->motorConstant_[1];
-        real_siganl[2] = -(signal[2] / robot_->motorConstant_[2] );
+        real_siganl[1] =   (signal[1] / 2.0);
+        real_siganl[2] = signal[2] / 1.37142857143;
 
-        printf(" Gravity Comp : [2 Joint]%f [3 Joint]%f\n", real_siganl[1], real_siganl[2]);
+//        printf(" Gravity Comp : [2 Joint]%f [3 Joint]%f\n", real_siganl[1], real_siganl[2]);
     }
 
     void robotGravityCompensation::GCOMPrun() {

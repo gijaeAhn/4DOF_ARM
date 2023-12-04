@@ -33,8 +33,10 @@ int main()
                               .build());
     //Setting Init Condition
     robot::robotPositionController test_posControl(30,30,1, &test_robot);
-    robot::robotGravityCompensation test_grav(&test_robot);
-    std::vector<float> init_pose = {0,-84.875443,158.598380};
+//    robot::robotPositionController test_posControl(0,0,0, &test_robot);
+//    robot::robotGravityCompensation test_grav(&test_robot);
+//    std::vector<float> init_pose = {0,-84.875443,158.598380};
+    std::vector<float> init_pose = {0,0,0};
 
     test_robot.setJoint(init_pose);
 
@@ -42,19 +44,22 @@ int main()
     //Run Threads
     std::thread robotrun(&robot::Robot::run,&test_robot);
     std::thread PIDrun(&robot::robotPositionController::PIDrun,&test_posControl);
-    std::thread GRAVrun(&robot::robotGravityCompensation::GCOMPrun,&test_grav);
+//    std::thread GRAVrun(&robot::robotGravityCompensation::GCOMPrun,&test_grav);
 
     sleep(MOTORINIT_TIME);
     sleep(MOTORINIT_TIME);
 
-    //Control Position
-//    std::vector<double> setpoint = {0,0,90};
-//    test_posControl.PIDcontrol(setpoint);
+//     Control Position
+    std::vector<double> setpoint = {180,180,180};
+    test_posControl.PIDcontrol(setpoint);
+
+
+
 
 
     robotrun.join();
     PIDrun.join();
-    GRAVrun.join();
-    
+//    GRAVrun.join();
+
 
 }

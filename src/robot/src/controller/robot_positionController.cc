@@ -112,13 +112,13 @@ namespace robot{
             {
                 controlThreads_.emplace_back(&robot::robotPositionController::singleMotorControl, this, robot_->motorList[it], setpoint[it]);
             }
-             std::cout << "Debug 5" << std::endl;
+
 
 
             for (auto& thread : controlThreads_){
                 thread.join();
             }
-            std::cout << "Debug 6" << std::endl;
+
 
             sleep(3);
             robot_->showCurrentJoint();
@@ -152,7 +152,8 @@ namespace robot{
                 do{ 
                     pid_timer.wait();
                     double currentPosition = robot_->jointPosition_[motor.motor_id - 1];
-                    double error = (setpoint - currentPosition) * DEGREE_2_RADIAN;
+
+                    error = (setpoint - currentPosition) * DEGREE_2_RADIAN;
                     double ivalue = pid_timer.dt_ * error; 
                     double deriva = (error - pid_error.error_) / pid_timer.dt_; 
                     pid_error.setError(error, ivalue, deriva);
@@ -165,13 +166,15 @@ namespace robot{
                                    
 
                     signal[motor.motor_id-1] = controlSignal;
-                    real_signal[motor.motor_id-1] = controlSignal/motor.motorConstant;
-                    if(iteration % 300 ==0){
-                    printf("Motor ID :%d , Posotion : %f,  Signal : %lf\n",motor.motor_id,robot_->jointPosition_[motor.motor_id-1] ,controlSignal);
+                    real_signal[motor.motor_id-1] = controlSignal/200;
+                    if(true){
+                        printf(" Motor %d Debug joint position : %f \n", motor.motor_id,robot_->jointPosition_[motor.motor_id - 1] );
+//                    printf("Motor ID :%d , Posotion : %f,  Signal : %lf\n",,robot_->jointPosition_[motor.motor_id-1] ,controlSignal);
+                    printf( "Motor ID : %d error : %f , contorlSignal : %f\n",motor.motor_id, error, controlSignal  );
                     robot_->showCurrentJoint();}
                     iteration++;
-                // }while((std::abs(pid_error.error_) > errorThreshold)&& (controlSignal > 1e-3));
-                }while(true);
+                 }while((std::abs(pid_error.error_) > errorThreshold)&& (controlSignal > 1e-3));
+//                }while(true);
 
             }
             // RMD CONTROL PID END
