@@ -57,10 +57,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot//CMakeFiles/progress.marks
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot//CMakeFiles/progress.marks
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/clean
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 robot/CMakeFiles/robot.dir/rule:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/CMakeFiles/robot.dir/rule
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/CMakeFiles/robot.dir/rule
 .PHONY : robot/CMakeFiles/robot.dir/rule
 
 # Convenience name for target.
@@ -173,12 +173,12 @@ robot: robot/CMakeFiles/robot.dir/rule
 
 # fast build rule for target.
 robot/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/build
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/build
 .PHONY : robot/fast
 
 # Convenience name for target.
 robot/CMakeFiles/robot_pub.dir/rule:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/CMakeFiles/robot_pub.dir/rule
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot/CMakeFiles/robot_pub.dir/rule
 .PHONY : robot/CMakeFiles/robot_pub.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ robot_pub: robot/CMakeFiles/robot_pub.dir/rule
 
 # fast build rule for target.
 robot_pub/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/build
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/build
 .PHONY : robot_pub/fast
 
 src/controller/robot_gravityCompensation.o: src/controller/robot_gravityCompensation.cc.o
@@ -195,7 +195,7 @@ src/controller/robot_gravityCompensation.o: src/controller/robot_gravityCompensa
 
 # target to build an object file
 src/controller/robot_gravityCompensation.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o
 .PHONY : src/controller/robot_gravityCompensation.cc.o
 
 src/controller/robot_gravityCompensation.i: src/controller/robot_gravityCompensation.cc.i
@@ -203,7 +203,7 @@ src/controller/robot_gravityCompensation.i: src/controller/robot_gravityCompensa
 
 # target to preprocess a source file
 src/controller/robot_gravityCompensation.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.i
 .PHONY : src/controller/robot_gravityCompensation.cc.i
 
 src/controller/robot_gravityCompensation.s: src/controller/robot_gravityCompensation.cc.s
@@ -211,7 +211,7 @@ src/controller/robot_gravityCompensation.s: src/controller/robot_gravityCompensa
 
 # target to generate assembly for a file
 src/controller/robot_gravityCompensation.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.s
 .PHONY : src/controller/robot_gravityCompensation.cc.s
 
 src/controller/robot_impedenceController.o: src/controller/robot_impedenceController.cc.o
@@ -219,7 +219,7 @@ src/controller/robot_impedenceController.o: src/controller/robot_impedenceContro
 
 # target to build an object file
 src/controller/robot_impedenceController.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o
 .PHONY : src/controller/robot_impedenceController.cc.o
 
 src/controller/robot_impedenceController.i: src/controller/robot_impedenceController.cc.i
@@ -227,7 +227,7 @@ src/controller/robot_impedenceController.i: src/controller/robot_impedenceContro
 
 # target to preprocess a source file
 src/controller/robot_impedenceController.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.i
 .PHONY : src/controller/robot_impedenceController.cc.i
 
 src/controller/robot_impedenceController.s: src/controller/robot_impedenceController.cc.s
@@ -235,7 +235,7 @@ src/controller/robot_impedenceController.s: src/controller/robot_impedenceContro
 
 # target to generate assembly for a file
 src/controller/robot_impedenceController.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.s
 .PHONY : src/controller/robot_impedenceController.cc.s
 
 src/controller/robot_positionController.o: src/controller/robot_positionController.cc.o
@@ -243,7 +243,7 @@ src/controller/robot_positionController.o: src/controller/robot_positionControll
 
 # target to build an object file
 src/controller/robot_positionController.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o
 .PHONY : src/controller/robot_positionController.cc.o
 
 src/controller/robot_positionController.i: src/controller/robot_positionController.cc.i
@@ -251,7 +251,7 @@ src/controller/robot_positionController.i: src/controller/robot_positionControll
 
 # target to preprocess a source file
 src/controller/robot_positionController.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.i
 .PHONY : src/controller/robot_positionController.cc.i
 
 src/controller/robot_positionController.s: src/controller/robot_positionController.cc.s
@@ -259,7 +259,7 @@ src/controller/robot_positionController.s: src/controller/robot_positionControll
 
 # target to generate assembly for a file
 src/controller/robot_positionController.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.s
 .PHONY : src/controller/robot_positionController.cc.s
 
 src/robot_body.o: src/robot_body.cc.o
@@ -267,7 +267,7 @@ src/robot_body.o: src/robot_body.cc.o
 
 # target to build an object file
 src/robot_body.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_body.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_body.cc.o
 .PHONY : src/robot_body.cc.o
 
 src/robot_body.i: src/robot_body.cc.i
@@ -275,7 +275,7 @@ src/robot_body.i: src/robot_body.cc.i
 
 # target to preprocess a source file
 src/robot_body.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_body.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_body.cc.i
 .PHONY : src/robot_body.cc.i
 
 src/robot_body.s: src/robot_body.cc.s
@@ -283,7 +283,7 @@ src/robot_body.s: src/robot_body.cc.s
 
 # target to generate assembly for a file
 src/robot_body.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_body.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_body.cc.s
 .PHONY : src/robot_body.cc.s
 
 src/robot_builder.o: src/robot_builder.cc.o
@@ -291,7 +291,7 @@ src/robot_builder.o: src/robot_builder.cc.o
 
 # target to build an object file
 src/robot_builder.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_builder.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_builder.cc.o
 .PHONY : src/robot_builder.cc.o
 
 src/robot_builder.i: src/robot_builder.cc.i
@@ -299,7 +299,7 @@ src/robot_builder.i: src/robot_builder.cc.i
 
 # target to preprocess a source file
 src/robot_builder.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_builder.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_builder.cc.i
 .PHONY : src/robot_builder.cc.i
 
 src/robot_builder.s: src/robot_builder.cc.s
@@ -307,7 +307,7 @@ src/robot_builder.s: src/robot_builder.cc.s
 
 # target to generate assembly for a file
 src/robot_builder.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_builder.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_builder.cc.s
 .PHONY : src/robot_builder.cc.s
 
 src/robot_pub.o: src/robot_pub.cc.o
@@ -315,8 +315,8 @@ src/robot_pub.o: src/robot_pub.cc.o
 
 # target to build an object file
 src/robot_pub.cc.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_pub.cc.o
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_pub.cc.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.o
 .PHONY : src/robot_pub.cc.o
 
 src/robot_pub.i: src/robot_pub.cc.i
@@ -324,8 +324,8 @@ src/robot_pub.i: src/robot_pub.cc.i
 
 # target to preprocess a source file
 src/robot_pub.cc.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_pub.cc.i
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_pub.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.i
 .PHONY : src/robot_pub.cc.i
 
 src/robot_pub.s: src/robot_pub.cc.s
@@ -333,8 +333,8 @@ src/robot_pub.s: src/robot_pub.cc.s
 
 # target to generate assembly for a file
 src/robot_pub.cc.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_pub.cc.s
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot.dir/build.make robot/CMakeFiles/robot.dir/src/robot_pub.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f robot/CMakeFiles/robot_pub.dir/build.make robot/CMakeFiles/robot_pub.dir/src/robot_pub.cc.s
 .PHONY : src/robot_pub.cc.s
 
 # Help Target
@@ -380,7 +380,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,10 +53,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/depend.make
@@ -70,18 +70,18 @@ include Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/
 include Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/flags.make
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o: Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/flags.make
-Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o: /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp
+Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o: /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o: Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o -MF CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o.d -o CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o -c /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o -MF CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o.d -o CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.o -c /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp > CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp > CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.i
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp -o CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/src/ball_navsat_transform.cpp -o CMakeFiles/ball_navsat_transform.dir/src/ball_navsat_transform.cpp.s
 
 # Object files for target ball_navsat_transform
 ball_navsat_transform_OBJECTS = \
@@ -132,18 +132,18 @@ devel/lib/libball_navsat_transform.so: /usr/lib/x86_64-linux-gnu/libboost_thread
 devel/lib/libball_navsat_transform.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 devel/lib/libball_navsat_transform.so: /usr/lib/x86_64-linux-gnu/libGeographic.so
 devel/lib/libball_navsat_transform.so: Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../../devel/lib/libball_navsat_transform.so"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ball_navsat_transform.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../../devel/lib/libball_navsat_transform.so"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ball_navsat_transform.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/build: devel/lib/libball_navsat_transform.so
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/build
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -P CMakeFiles/ball_navsat_transform.dir/cmake_clean.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization && $(CMAKE_COMMAND) -P CMakeFiles/ball_navsat_transform.dir/cmake_clean.cmake
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/clean
 
 Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sj/Desktop/4DOF_ARM/src /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gj/Desktop/4DOF_ARM/src /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Dependencies/EKF/ball_localization/CMakeFiles/ball_navsat_transform.dir/depend
 

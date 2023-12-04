@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sj/Desktop/4DOF_ARM/src/FSM/src/FSM.cc" "FSM/CMakeFiles/FSM.dir/src/FSM.cc.o" "gcc" "FSM/CMakeFiles/FSM.dir/src/FSM.cc.o.d"
+  "/home/gj/Desktop/4DOF_ARM/src/FSM/src/FSM.cc" "FSM/CMakeFiles/FSM.dir/src/FSM.cc.o" "gcc" "FSM/CMakeFiles/FSM.dir/src/FSM.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

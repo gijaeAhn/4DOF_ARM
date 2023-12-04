@@ -114,6 +114,7 @@ void Robot::run(){
         getJoint();
         getJointV();
 
+
     }
 
 }

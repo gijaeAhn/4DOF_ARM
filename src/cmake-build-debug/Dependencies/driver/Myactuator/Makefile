@@ -57,10 +57,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/driver/Myactuator//CMakeFiles/progress.marks
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/driver/Myactuator//CMakeFiles/progress.marks
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/clean
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/preinstall
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/rule:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/rule
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/rule
 .PHONY : Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ myactuator_rmd: Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/rul
 
 # fast build rule for target.
 myactuator_rmd/fast:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build
 .PHONY : myactuator_rmd/fast
 
 src/can/node.o: src/can/node.cpp.o
@@ -181,7 +181,7 @@ src/can/node.o: src/can/node.cpp.o
 
 # target to build an object file
 src/can/node.cpp.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/node.cpp.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/node.cpp.o
 .PHONY : src/can/node.cpp.o
 
 src/can/node.i: src/can/node.cpp.i
@@ -189,7 +189,7 @@ src/can/node.i: src/can/node.cpp.i
 
 # target to preprocess a source file
 src/can/node.cpp.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/node.cpp.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/node.cpp.i
 .PHONY : src/can/node.cpp.i
 
 src/can/node.s: src/can/node.cpp.s
@@ -197,7 +197,7 @@ src/can/node.s: src/can/node.cpp.s
 
 # target to generate assembly for a file
 src/can/node.cpp.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/node.cpp.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/node.cpp.s
 .PHONY : src/can/node.cpp.s
 
 src/can/utilities.o: src/can/utilities.cpp.o
@@ -205,7 +205,7 @@ src/can/utilities.o: src/can/utilities.cpp.o
 
 # target to build an object file
 src/can/utilities.cpp.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/utilities.cpp.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/utilities.cpp.o
 .PHONY : src/can/utilities.cpp.o
 
 src/can/utilities.i: src/can/utilities.cpp.i
@@ -213,7 +213,7 @@ src/can/utilities.i: src/can/utilities.cpp.i
 
 # target to preprocess a source file
 src/can/utilities.cpp.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/utilities.cpp.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/utilities.cpp.i
 .PHONY : src/can/utilities.cpp.i
 
 src/can/utilities.s: src/can/utilities.cpp.s
@@ -221,7 +221,7 @@ src/can/utilities.s: src/can/utilities.cpp.s
 
 # target to generate assembly for a file
 src/can/utilities.cpp.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/utilities.cpp.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/can/utilities.cpp.s
 .PHONY : src/can/utilities.cpp.s
 
 src/driver.o: src/driver.cpp.o
@@ -229,7 +229,7 @@ src/driver.o: src/driver.cpp.o
 
 # target to build an object file
 src/driver.cpp.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/driver.cpp.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/driver.cpp.o
 .PHONY : src/driver.cpp.o
 
 src/driver.i: src/driver.cpp.i
@@ -237,7 +237,7 @@ src/driver.i: src/driver.cpp.i
 
 # target to preprocess a source file
 src/driver.cpp.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/driver.cpp.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/driver.cpp.i
 .PHONY : src/driver.cpp.i
 
 src/driver.s: src/driver.cpp.s
@@ -245,7 +245,7 @@ src/driver.s: src/driver.cpp.s
 
 # target to generate assembly for a file
 src/driver.cpp.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/driver.cpp.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/driver.cpp.s
 .PHONY : src/driver.cpp.s
 
 src/protocol/requests.o: src/protocol/requests.cpp.o
@@ -253,7 +253,7 @@ src/protocol/requests.o: src/protocol/requests.cpp.o
 
 # target to build an object file
 src/protocol/requests.cpp.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/requests.cpp.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/requests.cpp.o
 .PHONY : src/protocol/requests.cpp.o
 
 src/protocol/requests.i: src/protocol/requests.cpp.i
@@ -261,7 +261,7 @@ src/protocol/requests.i: src/protocol/requests.cpp.i
 
 # target to preprocess a source file
 src/protocol/requests.cpp.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/requests.cpp.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/requests.cpp.i
 .PHONY : src/protocol/requests.cpp.i
 
 src/protocol/requests.s: src/protocol/requests.cpp.s
@@ -269,7 +269,7 @@ src/protocol/requests.s: src/protocol/requests.cpp.s
 
 # target to generate assembly for a file
 src/protocol/requests.cpp.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/requests.cpp.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/requests.cpp.s
 .PHONY : src/protocol/requests.cpp.s
 
 src/protocol/responses.o: src/protocol/responses.cpp.o
@@ -277,7 +277,7 @@ src/protocol/responses.o: src/protocol/responses.cpp.o
 
 # target to build an object file
 src/protocol/responses.cpp.o:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/responses.cpp.o
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/responses.cpp.o
 .PHONY : src/protocol/responses.cpp.o
 
 src/protocol/responses.i: src/protocol/responses.cpp.i
@@ -285,7 +285,7 @@ src/protocol/responses.i: src/protocol/responses.cpp.i
 
 # target to preprocess a source file
 src/protocol/responses.cpp.i:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/responses.cpp.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/responses.cpp.i
 .PHONY : src/protocol/responses.cpp.i
 
 src/protocol/responses.s: src/protocol/responses.cpp.s
@@ -293,7 +293,7 @@ src/protocol/responses.s: src/protocol/responses.cpp.s
 
 # target to generate assembly for a file
 src/protocol/responses.cpp.s:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/responses.cpp.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/build.make Dependencies/driver/Myactuator/CMakeFiles/myactuator_rmd.dir/src/protocol/responses.cpp.s
 .PHONY : src/protocol/responses.cpp.s
 
 # Help Target
@@ -335,7 +335,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization
+# Install script for directory: /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -61,7 +61,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -73,7 +73,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/env.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -86,8 +86,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.bash"
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.bash"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.bash"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
@@ -101,8 +101,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.sh"
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.sh"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.sh"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
@@ -116,8 +116,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.zsh"
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.zsh"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/setup.zsh"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
@@ -130,66 +130,66 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/srv" TYPE FILE FILES
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/GetState.srv"
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetDatum.srv"
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetPose.srv"
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetUTMZone.srv"
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToggleFilterProcessing.srv"
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/FromLL.srv"
-    "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToLL.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/GetState.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetDatum.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetPose.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/SetUTMZone.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToggleFilterProcessing.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/FromLL.srv"
+    "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/srv/ToLL.srv"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/cmake" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localization-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/cmake" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localization-msg-paths.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include/ball_localization")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/include/ball_localization")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/roseus/ros/ball_localization")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/roseus/ros/ball_localization")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/common-lisp/ros/ball_localization")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/common-lisp/ros/ball_localization")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/gennodejs/ros/ball_localization")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/share/gennodejs/ros/ball_localization")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/python3/dist-packages/ball_localization")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/python3/dist-packages/ball_localization")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/python3/dist-packages/ball_localization")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/python3/dist-packages/ball_localization")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localization.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localization.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/cmake" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localization-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/cmake" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localization-msg-extras.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/cmake" TYPE FILE FILES
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localizationConfig.cmake"
-    "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localizationConfig-version.cmake"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localizationConfig.cmake"
+    "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_localization/catkin_generated/installspace/ball_localizationConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -199,12 +199,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ekf.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ekf.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf.so")
@@ -222,12 +222,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf_localization_nodelet.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ekf_localization_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ekf_localization_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf_localization_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf_localization_nodelet.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf_localization_nodelet.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ekf_localization_nodelet.so")
@@ -245,12 +245,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_base.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_filter_base.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_filter_base.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_base.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_base.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_base.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_base.so")
@@ -268,7 +268,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_utilities.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_filter_utilities.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_filter_utilities.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_utilities.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_filter_utilities.so")
     file(RPATH_CHANGE
@@ -291,12 +291,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_navsat_transform.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_navsat_transform.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform.so")
@@ -314,12 +314,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform_nodelet.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_navsat_transform_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_navsat_transform_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform_nodelet.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform_nodelet.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_navsat_transform_nodelet.so")
@@ -337,12 +337,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libros_ball_filter.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libros_ball_filter.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter.so")
@@ -360,7 +360,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter_utilities.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libros_ball_filter_utilities.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libros_ball_filter_utilities.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter_utilities.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_filter_utilities.so")
     file(RPATH_CHANGE
@@ -383,12 +383,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_localization_estimator.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_localization_estimator.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_localization_estimator.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_localization_estimator.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_localization_estimator.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_localization_estimator.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_localization_estimator.so")
@@ -406,12 +406,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_localization_listener.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libros_ball_localization_listener.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libros_ball_localization_listener.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_localization_listener.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_localization_listener.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_localization_listener.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libros_ball_localization_listener.so")
@@ -429,12 +429,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ukf.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ukf.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf.so")
@@ -452,12 +452,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf_localization_nodelet.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ukf_localization_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/libball_ukf_localization_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf_localization_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf_localization_nodelet.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf_localization_nodelet.so"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libball_ukf_localization_nodelet.so")
@@ -475,12 +475,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ekf_localization_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_ekf_localization_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_ekf_localization_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ekf_localization_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ekf_localization_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ekf_localization_node"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ekf_localization_node")
@@ -495,12 +495,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_navsat_transform_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_navsat_transform_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_navsat_transform_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_navsat_transform_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_navsat_transform_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_navsat_transform_node"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_navsat_transform_node")
@@ -515,12 +515,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_localization_listener_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_localization_listener_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_localization_listener_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_localization_listener_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_localization_listener_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_localization_listener_node"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_localization_listener_node")
@@ -535,12 +535,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ukf_localization_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_ukf_localization_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ball_localization" TYPE EXECUTABLE FILES "/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib/ball_localization/ball_ukf_localization_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ukf_localization_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ukf_localization_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ukf_localization_node"
-         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/usr/usr/lib/x86_64-linux-gnu:/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ball_localization/ball_ukf_localization_node")
@@ -549,28 +549,28 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ball_localization" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include/ball_localization/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ball_localization" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/include/ball_localization/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/launch" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/launch/" FILES_MATCHING REGEX "/[^/]*\\.launch$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/launch" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/launch/" FILES_MATCHING REGEX "/[^/]*\\.launch$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/params" TYPE DIRECTORY FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/params/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization/params" TYPE DIRECTORY FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/params/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/LICENSE")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization" TYPE FILE FILES "/home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/nodelet_plugins.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ball_localization" TYPE FILE FILES "/home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_localization/nodelet_plugins.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/gtest/cmake_install.cmake")
+  include("/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/gtest/cmake_install.cmake")
 
 endif()
 

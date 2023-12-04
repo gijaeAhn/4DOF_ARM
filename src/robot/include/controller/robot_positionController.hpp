@@ -35,6 +35,7 @@ class robotPositionController {
 
 
 
+
     public:
 
         robotPositionController(float pGain, float iGain,float dGain,Robot* robot);
@@ -42,11 +43,13 @@ class robotPositionController {
         ~robotPositionController();
 
 
-        void PIDcontrol( std::vector<double> setpoint);
+        void PIDcontrol();
 
-        void singleMotorControl(Motor motor, double setpoint);
+        void singleMotorControl(Motor motor);
 
         void PIDrun();
+
+        std::vector<double> setpoint_;
 
 
         

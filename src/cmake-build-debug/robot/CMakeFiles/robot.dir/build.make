@@ -53,10 +53,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include robot/CMakeFiles/robot.dir/depend.make
@@ -70,88 +70,88 @@ include robot/CMakeFiles/robot.dir/progress.make
 include robot/CMakeFiles/robot.dir/flags.make
 
 robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o: robot/CMakeFiles/robot.dir/flags.make
-robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o: /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc
+robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o: /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc
 robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o: robot/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o -MF CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o.d -o CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o -c /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o -MF CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o.d -o CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.o -c /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc
 
 robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc > CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc > CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.i
 
 robot/CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc -o CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_gravityCompensation.cc -o CMakeFiles/robot.dir/src/controller/robot_gravityCompensation.cc.s
 
 robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o: robot/CMakeFiles/robot.dir/flags.make
-robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o: /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc
+robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o: /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc
 robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o: robot/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o -MF CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o.d -o CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o -c /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o -MF CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o.d -o CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.o -c /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc
 
 robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc > CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc > CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.i
 
 robot/CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc -o CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_impedenceController.cc -o CMakeFiles/robot.dir/src/controller/robot_impedenceController.cc.s
 
 robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o: robot/CMakeFiles/robot.dir/flags.make
-robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o: /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc
+robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o: /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc
 robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o: robot/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o -MF CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o.d -o CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o -c /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o -MF CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o.d -o CMakeFiles/robot.dir/src/controller/robot_positionController.cc.o -c /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc
 
 robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/src/controller/robot_positionController.cc.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc > CMakeFiles/robot.dir/src/controller/robot_positionController.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc > CMakeFiles/robot.dir/src/controller/robot_positionController.cc.i
 
 robot/CMakeFiles/robot.dir/src/controller/robot_positionController.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/src/controller/robot_positionController.cc.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc -o CMakeFiles/robot.dir/src/controller/robot_positionController.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/robot/src/controller/robot_positionController.cc -o CMakeFiles/robot.dir/src/controller/robot_positionController.cc.s
 
 robot/CMakeFiles/robot.dir/src/robot_body.cc.o: robot/CMakeFiles/robot.dir/flags.make
-robot/CMakeFiles/robot.dir/src/robot_body.cc.o: /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc
+robot/CMakeFiles/robot.dir/src/robot_body.cc.o: /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc
 robot/CMakeFiles/robot.dir/src/robot_body.cc.o: robot/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object robot/CMakeFiles/robot.dir/src/robot_body.cc.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/robot_body.cc.o -MF CMakeFiles/robot.dir/src/robot_body.cc.o.d -o CMakeFiles/robot.dir/src/robot_body.cc.o -c /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object robot/CMakeFiles/robot.dir/src/robot_body.cc.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/robot_body.cc.o -MF CMakeFiles/robot.dir/src/robot_body.cc.o.d -o CMakeFiles/robot.dir/src/robot_body.cc.o -c /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc
 
 robot/CMakeFiles/robot.dir/src/robot_body.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/src/robot_body.cc.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc > CMakeFiles/robot.dir/src/robot_body.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc > CMakeFiles/robot.dir/src/robot_body.cc.i
 
 robot/CMakeFiles/robot.dir/src/robot_body.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/src/robot_body.cc.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc -o CMakeFiles/robot.dir/src/robot_body.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_body.cc -o CMakeFiles/robot.dir/src/robot_body.cc.s
 
 robot/CMakeFiles/robot.dir/src/robot_builder.cc.o: robot/CMakeFiles/robot.dir/flags.make
-robot/CMakeFiles/robot.dir/src/robot_builder.cc.o: /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc
+robot/CMakeFiles/robot.dir/src/robot_builder.cc.o: /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc
 robot/CMakeFiles/robot.dir/src/robot_builder.cc.o: robot/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object robot/CMakeFiles/robot.dir/src/robot_builder.cc.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/robot_builder.cc.o -MF CMakeFiles/robot.dir/src/robot_builder.cc.o.d -o CMakeFiles/robot.dir/src/robot_builder.cc.o -c /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object robot/CMakeFiles/robot.dir/src/robot_builder.cc.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/robot_builder.cc.o -MF CMakeFiles/robot.dir/src/robot_builder.cc.o.d -o CMakeFiles/robot.dir/src/robot_builder.cc.o -c /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc
 
 robot/CMakeFiles/robot.dir/src/robot_builder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/src/robot_builder.cc.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc > CMakeFiles/robot.dir/src/robot_builder.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc > CMakeFiles/robot.dir/src/robot_builder.cc.i
 
 robot/CMakeFiles/robot.dir/src/robot_builder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/src/robot_builder.cc.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc -o CMakeFiles/robot.dir/src/robot_builder.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_builder.cc -o CMakeFiles/robot.dir/src/robot_builder.cc.s
 
 robot/CMakeFiles/robot.dir/src/robot_pub.cc.o: robot/CMakeFiles/robot.dir/flags.make
-robot/CMakeFiles/robot.dir/src/robot_pub.cc.o: /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc
+robot/CMakeFiles/robot.dir/src/robot_pub.cc.o: /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc
 robot/CMakeFiles/robot.dir/src/robot_pub.cc.o: robot/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object robot/CMakeFiles/robot.dir/src/robot_pub.cc.o"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/robot_pub.cc.o -MF CMakeFiles/robot.dir/src/robot_pub.cc.o.d -o CMakeFiles/robot.dir/src/robot_pub.cc.o -c /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object robot/CMakeFiles/robot.dir/src/robot_pub.cc.o"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT robot/CMakeFiles/robot.dir/src/robot_pub.cc.o -MF CMakeFiles/robot.dir/src/robot_pub.cc.o.d -o CMakeFiles/robot.dir/src/robot_pub.cc.o -c /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc
 
 robot/CMakeFiles/robot.dir/src/robot_pub.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/src/robot_pub.cc.i"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc > CMakeFiles/robot.dir/src/robot_pub.cc.i
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc > CMakeFiles/robot.dir/src/robot_pub.cc.i
 
 robot/CMakeFiles/robot.dir/src/robot_pub.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/src/robot_pub.cc.s"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc -o CMakeFiles/robot.dir/src/robot_pub.cc.s
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gj/Desktop/4DOF_ARM/src/robot/src/robot_pub.cc -o CMakeFiles/robot.dir/src/robot_pub.cc.s
 
 # Object files for target robot
 robot_OBJECTS = \
@@ -175,18 +175,18 @@ lib/librobot.so: robot/CMakeFiles/robot.dir/build.make
 lib/librobot.so: lib/libFSM.so
 lib/librobot.so: lib/libmyactuator_rmd.so
 lib/librobot.so: robot/CMakeFiles/robot.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library ../lib/librobot.so"
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library ../lib/librobot.so"
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 robot/CMakeFiles/robot.dir/build: lib/librobot.so
 .PHONY : robot/CMakeFiles/robot.dir/build
 
 robot/CMakeFiles/robot.dir/clean:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && $(CMAKE_COMMAND) -P CMakeFiles/robot.dir/cmake_clean.cmake
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot && $(CMAKE_COMMAND) -P CMakeFiles/robot.dir/cmake_clean.cmake
 .PHONY : robot/CMakeFiles/robot.dir/clean
 
 robot/CMakeFiles/robot.dir/depend:
-	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sj/Desktop/4DOF_ARM/src /home/sj/Desktop/4DOF_ARM/src/robot /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/robot/CMakeFiles/robot.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gj/Desktop/4DOF_ARM/src /home/gj/Desktop/4DOF_ARM/src/robot /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/robot/CMakeFiles/robot.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot/CMakeFiles/robot.dir/depend
 

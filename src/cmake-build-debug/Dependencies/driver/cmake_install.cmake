@@ -1,4 +1,4 @@
-# Install script for directory: /home/sj/Desktop/4DOF_ARM/src/Dependencies/driver
+# Install script for directory: /home/gj/Desktop/4DOF_ARM/src/Dependencies/driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,6 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/driver/Myactuator/cmake_install.cmake")
+  include("/home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/driver/Myactuator/cmake_install.cmake")
 endif()
 
