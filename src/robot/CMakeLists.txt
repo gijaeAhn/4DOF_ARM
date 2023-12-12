@@ -44,12 +44,13 @@ target_compile_features(robot PRIVATE cxx_std_17)
 target_link_libraries(robot FSM myactuator_rmd ${EIGEN3_LIBRARIES})
 
 add_executable(robot_pub src/robot_pub.cc)
-target_link_libraries(robot_pub 
-                                FSM 
-                                myactuator_rmd 
-                                robot
-                                Threads::Threads)
-target_include_directories(robot_pub PUBLIC 
+
+target_link_libraries(robot_pub
+        FSM
+        myactuator_rmd
+        robot
+        Threads::Threads)
+target_include_directories(robot_pub PUBLIC
                           ${CMAKE_CURRENT_SOURCE_DIR}/include 
                           ${myactuator_rmd_SOURCE_DIR}/include 
                           ${FSM_SOURCE_DIR}/include 

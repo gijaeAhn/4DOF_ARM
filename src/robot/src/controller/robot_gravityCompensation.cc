@@ -28,9 +28,38 @@ namespace robot{
         signal[1] = 2.4 * ::sin(angle[1]*DEGREE_2_RADIAN) + 1.3 * ::sin((angle[1] - angle[2])*DEGREE_2_RADIAN);
         signal[2] = 1.27838156 * ::sin((angle[1] - angle[2])*DEGREE_2_RADIAN);
 
-        real_siganl[0]= 0;
-        real_siganl[1] =   -(signal[1] / 1.8);
-        real_siganl[2] = signal[2] / 1.3;
+        if(angle[1] > 15.0){
+            real_siganl[0] = 0;
+            real_siganl[1] =   -(signal[1] / 2.0);
+            real_siganl[2] = signal[2] / 1.35;
+        }
+        else if(angle[1]> 30.0){
+            real_siganl[0] = 0;
+            real_siganl[1] =   -(signal[1] / 1.9);
+            real_siganl[2] = signal[2] / 1.35;
+        }
+        else if(angle[1]  > 40 ){
+            real_siganl[0] = 0;
+            real_siganl[1] =   -(signal[1] / 2.1);
+            real_siganl[2] = signal[2] / 1.35;
+        }
+        else if(angle[1] > 58)
+        {
+            real_siganl[0] = 0;
+            real_siganl[1] =   -(signal[1] / 2.2);
+            real_siganl[2] = signal[2] / 1.35;
+        }
+        else if(angle[1] > 86)
+        {
+            real_siganl[0] = 0;
+            real_siganl[1] =   -(signal[1] / 2.4);
+            real_siganl[2] = signal[2] / 1.35;
+        }
+        else{
+            real_siganl[0]= 0;
+            real_siganl[1] =   -(signal[1] / 1.9);
+            real_siganl[2] = signal[2] / 1.35;
+        }
 
 //        printf(" Gravity Comp : [2 Joint]%f [3 Joint]%f\n", real_siganl[1], real_siganl[2]);
     }

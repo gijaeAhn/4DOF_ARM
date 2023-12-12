@@ -85,10 +85,7 @@ void Robot::setJoint(std::vector<float> position){
 }
 
 void Robot::getJoint(){
-
-
     ANGLE_SHM.SHM_READ(Amemory);
-
 
     for (int i =0; i< ROBOT_MEM_SIZE; i++)
     {
@@ -113,7 +110,6 @@ void Robot::run(){
         timer.wait();
         getJoint();
         getJointV();
-
 
     }
 

@@ -8,12 +8,15 @@ namespace robot{
 
 
         robotPositionController::robotPositionController(float pGain, float iGain,float dGain,Robot* robot) 
-        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain), robot_(robot), PID_SHM(PID_CONTROL_KEY,ROBOT_MEM_SIZE)
-        {  
+        :  proportionalGain(pGain),  derivativeGain(dGain),integralGain(iGain), robot_(robot), PID_SHM(PID_CONTROL_KEY,ROBOT_MEM_SIZE),
+           POSITION_SET_SHM(POSITION_SET_KEY,ROBOT_MEM_SIZE)
+        {
             PID_SHM.SHM_GETID();
+            POSITION_SET_SHM.SHM_GETID();
             for ( int i =0; i <ROBOT_MEM_SIZE; i++){
                 signal[i] =0;
             }
+            setpoint_.resize(ROBOT_MEM_SIZE);
         }
 
         robotPositionController::~robotPositionController()
@@ -33,7 +36,6 @@ namespace robot{
             }
 
 
-            std::cout<<"PID CONTROL22" << std::endl;
             ////////////////////////////////////////////////////////
 
             for(int it =0 ; it < ROBOT_MEM_SIZE ; it++)
@@ -41,7 +43,6 @@ namespace robot{
                 controlThreads_.emplace_back(&robot::robotPositionController::singleMotorControl, this, robot_->motorList[it]);
             }
 
-            std::cout<<"PID CONTROL33" << std::endl;
             for (auto& thread : controlThreads_){
                 thread.join();
             }
@@ -76,31 +77,22 @@ namespace robot{
                     pid_error.setError(error, ivalue, deriva);
 
                     controlSignal = static_cast<float>(
-<<<<<<< HEAD
-                            proportionalGain *      pid_error.error_ +
-                            integralGain     *      pid_error.integralError_ +
-=======
                                     proportionalGain *      pid_error.error_ +
 //                                    integralGain     *      pid_error.integralError_ +
->>>>>>> c95e063b69725428aba0ed16536b9d2bde6c73e9
                                     derivativeGain   *      pid_error.derivativeError_);
 
                                    
 
                     signal[motor.motor_id-1] = controlSignal;
-<<<<<<< HEAD
-                    real_signal[motor.motor_id-1] = controlSignal/200;
-                    if(true){
+                    real_signal[motor.motor_id-1] = controlSignal/200.0;
+                    if(motor.motor_id ==3) real_signal[motor.motor_id-1] = real_signal[motor.motor_id-1] * 1.2;
+                    printf("Setpoint : %f\n", setpoint_[motor.motor_id-1]);
                     printf(" Motor %d Debug joint position : %f \n", motor.motor_id,robot_->jointPosition_[motor.motor_id - 1] );
-                    printf( "Motor ID : %d error : %f , contorlSignal : %f\n",motor.motor_id, error, controlSignal  );
-                    }
-=======
+                    printf( "Motor ID : %d error : %f , contorlSignal : %f\n",motor.motor_id, error, real_signal[motor.motor_id-1] );
+
                     real_signal[motor.motor_id-1] = controlSignal;
 
-                    printf( "Motor ID : %d error : %f , contorlSignal : %f\n",motor.motor_id, error, controlSignal  );
->>>>>>> c95e063b69725428aba0ed16536b9d2bde6c73e9
                     iteration++;
-//                 }while((std::abs(pid_error.error_) > errorThreshold) || (controlSignal > 1e-3));
                 }while(true);
 
             }
@@ -116,7 +108,13 @@ namespace robot{
         timer.next_execution = std::chrono::steady_clock::now();
         while(true){
             timer.wait();
-
+            POSITION_SET_SHM.SHM_READ(set_position);
+            for(int iter =0; iter < ROBOT_MEM_SIZE; iter++){
+                printf(" Recieved set position %f %f %f\n" ,set_position[0],set_position[1],set_position[2]);
+            }
+            for(int iter =0; iter < ROBOT_MEM_SIZE; iter++){
+                setpoint_[iter] = set_position[iter];
+            }
             PID_SHM.SHM_WRITE(real_signal);
         }
     }

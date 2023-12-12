@@ -1,0 +1,240 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Dependencies/driver",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-Dependencies.driver-Debug-4d13c87d98303375e3c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Dependencies/driver"
+				},
+				{
+					"build" : "Dependencies/driver/Myactuator",
+					"jsonFile" : "directory-Dependencies.driver.Myactuator-Debug-d593004959f6c7558fb0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "Dependencies/driver/Myactuator",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "FSM",
+					"jsonFile" : "directory-FSM-Debug-e05e204322da248334c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "FSM",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "robot",
+					"jsonFile" : "directory-robot-Debug-82275796e1fedbe03909.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "robot",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "run",
+					"jsonFile" : "directory-run-Debug-3df51fb1983ae806376e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "run",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "4DOF_ARM"
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "driver",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "myactuator_rmd",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "FSM",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "robot",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "run",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "FSM::@5641bba0079d6c4f0fd6",
+					"jsonFile" : "target-FSM-Debug-06f4ac316d18492af238.json",
+					"name" : "FSM",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "PIDrun::@f2e8c7a8c3f9c5b354bb",
+					"jsonFile" : "target-PIDrun-Debug-566e742141e7f6504077.json",
+					"name" : "PIDrun",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "POSITIONrun::@f2e8c7a8c3f9c5b354bb",
+					"jsonFile" : "target-POSITIONrun-Debug-bb89ef86a38ed57e1d18.json",
+					"name" : "POSITIONrun",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "myactuator_rmd::@6df6fdfd321727f28483",
+					"jsonFile" : "target-myactuator_rmd-Debug-daae581556e0a1d75772.json",
+					"name" : "myactuator_rmd",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "robot::@c6d49de7a9922ca274e0",
+					"jsonFile" : "target-robot-Debug-9f0106d17b59022b17a1.json",
+					"name" : "robot",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "robot_pub::@c6d49de7a9922ca274e0",
+					"jsonFile" : "target-robot_pub-Debug-74191b037c511a3ebf78.json",
+					"name" : "robot_pub",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sj/Desktop/4DOF_ARM/src/cmake-build-debug",
+		"source" : "/home/sj/Desktop/4DOF_ARM/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

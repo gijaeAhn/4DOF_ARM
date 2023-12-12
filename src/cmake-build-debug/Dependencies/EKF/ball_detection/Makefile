@@ -57,10 +57,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gj/Desktop/4DOF_ARM/src
+CMAKE_SOURCE_DIR = /home/sj/Desktop/4DOF_ARM/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection//CMakeFiles/progress.marks
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/Dependencies/EKF/ball_detection//CMakeFiles/progress.marks
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/clean
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,33 +148,141 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule
+Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
+dynamic_reconfigure_generate_messages_cpp: Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_cpp
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_eus: Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+# Convenience name for target.
+Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_nodejs: Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+# Convenience name for target.
+Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
+
+# Convenience name for target.
+Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_gencfg: Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
+Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/rule:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/rule
+.PHONY : Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/rule
+
+# Convenience name for target.
+ball_detection: Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/rule
+.PHONY : ball_detection
+
+# fast build rule for target.
+ball_detection/fast:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/build
+.PHONY : ball_detection/fast
+
+src/ball_detection.o: src/ball_detection.cpp.o
+.PHONY : src/ball_detection.o
+
+# target to build an object file
+src/ball_detection.cpp.o:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/src/ball_detection.cpp.o
+.PHONY : src/ball_detection.cpp.o
+
+src/ball_detection.i: src/ball_detection.cpp.i
+.PHONY : src/ball_detection.i
+
+# target to preprocess a source file
+src/ball_detection.cpp.i:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/src/ball_detection.cpp.i
+.PHONY : src/ball_detection.cpp.i
+
+src/ball_detection.s: src/ball_detection.cpp.s
+.PHONY : src/ball_detection.s
+
+# target to generate assembly for a file
+src/ball_detection.cpp.s:
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/build.make Dependencies/EKF/ball_detection/CMakeFiles/ball_detection.dir/src/ball_detection.cpp.s
+.PHONY : src/ball_detection.cpp.s
 
 # Help Target
 help:
@@ -188,7 +296,16 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... ball_detection"
+	@echo "... src/ball_detection.o"
+	@echo "... src/ball_detection.i"
+	@echo "... src/ball_detection.s"
 .PHONY : help
 
 
@@ -200,7 +317,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
-	cd /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -P /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	cd /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: ball_calibration
-Description: Description of ball_calibration
-Version: 0.3.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

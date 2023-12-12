@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/POSITIONrun.dir/src/POSITIONrun.cc.o -o ../bin/POSITIONrun  -Wl,-rpath,/home/sj/Desktop/4DOF_ARM/build/lib ../lib/librobot.so ../lib/libFSM.so ../lib/libmyactuator_rmd.so 

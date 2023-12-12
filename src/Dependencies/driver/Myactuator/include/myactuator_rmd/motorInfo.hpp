@@ -10,13 +10,15 @@ const int oneShaftCycle = 40;
 const int maxShaftAngle = 65535;
 const int gearRatio = 9;
 //const float max_current = 3.125;
-const float max_current = 1.125;
+const float max_current = 2.125;
+const float max_pid_current = 1.125;
 
 
-
+//not using it right now.
 const int X8_CONST     = 51;
 const int X8_V2_CONST  = 45;
 const int X6_CONST     = 75;
+//
 
 const int X8_SHAFTCYCLE    = 60;
 const int X8_V2_SHAFTCYCLE  = 60;

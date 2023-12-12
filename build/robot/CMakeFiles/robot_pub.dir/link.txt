@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/robot_pub.dir/src/robot_pub.cc.o -o ../bin/robot_pub  -Wl,-rpath,/home/sj/Desktop/4DOF_ARM/build/lib ../lib/librobot.so ../lib/libFSM.so ../lib/libmyactuator_rmd.so -lpthread 

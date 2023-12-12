@@ -1,53 +1,49 @@
 <?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>ball_localization</name>
-  <version>2.7.3</version>
-  <description>Provides nonlinear state estimation through sensor fusion of an abritrary number of sensors.</description>
-
-  <maintainer email="ayrton04@gmail.com">Tom Moore</maintainer>
-
+  <name>catkin</name>
+  <version>0.8.10</version>
+  <description>Low-level build system macros and infrastructure for ROS.</description>
+  <maintainer email="michael@openrobotics.org">Michael Carroll</maintainer>
+  <maintainer email="tfoote@openrobotics.org">Tully Foote</maintainer>
   <license>BSD</license>
 
-  <url type="website">http://ros.org/wiki/ball_localization</url>
+  <url type="website">http://wiki.ros.org/catkin</url>
+  <url type="bugtracker">https://github.com/ros/catkin/issues</url>
+  <url type="repository">https://github.com/ros/catkin</url>
 
-  <author email="ayrton04@gmail.com">Tom Moore</author>
+  <author>Troy Straszheim</author>
+  <author>Morten Kjaergaard</author>
+  <author>Brian Gerkey</author>
+  <author>Dirk Thomas</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <depend condition="$ROS_PYTHON_VERSION == 2">python-argparse</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 2" version_gt="0.4.3">python-catkin-pkg</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 3" version_gt="0.4.3">python3-catkin-pkg</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 2">python-empy</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 3">python3-empy</depend>
 
-  <depend>cmake_modules</depend>
-  <depend>diagnostic_msgs</depend>
-  <depend>diagnostic_updater</depend>
-  <depend>eigen</depend>
-  <depend>eigen_conversions</depend>
-  <depend>geographiclib</depend>
-  <depend>geographic_msgs</depend>
-  <depend>geometry_msgs</depend>
-  <depend>message_filters</depend>
-  <depend>nav_msgs</depend>
-  <depend>nodelet</depend>
-  <depend>roscpp</depend>
-  <depend>sensor_msgs</depend>
-  <depend>std_msgs</depend>
-  <depend>std_srvs</depend>
-  <depend>tf2</depend>
-  <depend>tf2_geometry_msgs</depend>
-  <depend>tf2_ros</depend>
-  <depend>yaml-cpp</depend>
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_depend condition="$ROS_PYTHON_VERSION == 2">python-setuptools</buildtool_depend>
+  <buildtool_depend condition="$ROS_PYTHON_VERSION == 3">python3-setuptools</buildtool_depend>
 
-  <build_depend>message_generation</build_depend>
-  <build_depend condition="$ROS_PYTHON_VERSION == 2">python-catkin-pkg</build_depend>
-  <build_depend condition="$ROS_PYTHON_VERSION == 3">python3-catkin-pkg</build_depend>
-  <build_depend>roslint</build_depend>
+  <buildtool_export_depend>cmake</buildtool_export_depend>
+  <buildtool_export_depend condition="$ROS_PYTHON_VERSION == 3">python3-setuptools</buildtool_export_depend>
 
-  <exec_depend>message_runtime</exec_depend>
+  <build_export_depend>google-mock</build_export_depend>
+  <build_export_depend>gtest</build_export_depend>
+  <build_export_depend condition="$ROS_PYTHON_VERSION == 2">python-nose</build_export_depend>
+  <build_export_depend condition="$ROS_PYTHON_VERSION == 3">python3-nose</build_export_depend>
 
-  <test_depend>rosbag</test_depend>
-  <test_depend>rostest</test_depend>
-  <test_depend>rosunit</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 2">python-mock</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 3">python3-mock</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 2">python-nose</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 3">python3-nose</test_depend>
 
   <export>
-    <rosdoc config="rosdoc.yaml" />
-    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+    <rosdoc config="rosdoc.yaml"/>
+    <architecture_independent/>
   </export>
-
 </package>

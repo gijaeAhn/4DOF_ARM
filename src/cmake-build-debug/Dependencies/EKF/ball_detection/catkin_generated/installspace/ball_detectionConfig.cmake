@@ -67,8 +67,8 @@ set(ball_detection_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ball_detection_SOURCE_PREFIX /home/gj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_detection)
-  set(ball_detection_DEVEL_PREFIX /home/gj/Desktop/4DOF_ARM/src/cmake-build-debug/devel)
+  set(ball_detection_SOURCE_PREFIX /home/sj/Desktop/4DOF_ARM/src/Dependencies/EKF/ball_detection)
+  set(ball_detection_DEVEL_PREFIX /home/sj/Desktop/4DOF_ARM/src/cmake-build-debug/devel)
   set(ball_detection_INSTALL_PREFIX "")
   set(ball_detection_PREFIX ${ball_detection_DEVEL_PREFIX})
 else()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib;/opt/ros/noetic/lib)
+    foreach(path /usr/local/lib;/home/sj/Desktop/arm_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${ball_detection_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

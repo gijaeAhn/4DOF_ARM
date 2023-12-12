@@ -14,6 +14,7 @@
 #define  GRAVITY_COMPENSATION_KEY   1002
 #define  ANGLE_KEY                  1003
 #define  VEL_KEY                    1004
+#define  POSITION_SET_KEY           1005
 #define  ROBOT_MEM_SIZE 3
 #define MOTORINIT_TIME   5
 
@@ -59,26 +60,14 @@ namespace memory{
     int SHM<T>::SHM_CREATE(){
 
         if((SHM_id = shmget((key_t)SHM_key, SHM_size, IPC_CREAT| IPC_EXCL | 0666)) == -1) {
-        printf("SHM_CREATE : SHM already exist.\n");
-        SHM_GETID();
-        SHM_FREE();
-        SHM_id = shmget((key_t)SHM_key, SHM_size, IPC_CREAT| 0666);
+            printf("SHM_CREATE : SHM already exist.\n");
+            SHM_FREE();
+            SHM_id = shmget((key_t)SHM_key, SHM_size, IPC_CREAT| 0666);
         
         if(SHM_id == -1)
         {
             perror("SHM_CREATE : SHM create fail");
             return 1;
-        }
-        else
-        {
-            SHM_FREE();
-            SHM_id = shmget((key_t)SHM_key, ROBOT_MEM_SIZE, IPC_CREAT| 0666);
-            
-            if(SHM_id == -1)
-            {
-                perror("SHM_CREATE : SHM create fail");
-                return 1;
-            }
         }
     }
     

@@ -1,0 +1,4 @@
+/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/CMakeFiles/robot.dir
+/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/CMakeFiles/robot_pub.dir
+/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gj/Desktop/4DOF_ARM/src/robot/cmake-build-debug/CMakeFiles/rebuild_cache.dir

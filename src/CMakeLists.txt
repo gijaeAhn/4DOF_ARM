@@ -11,7 +11,6 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(Dependencies/driver)
-add_subdirectory(Dependencies/EKF)
 add_subdirectory(FSM)
 add_subdirectory(robot)
 add_subdirectory(run)

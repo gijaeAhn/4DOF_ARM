@@ -24,9 +24,6 @@ void signalHandler(int signum);
 int main()
 {
     signal(SIGINT, signalHandler);
-
-
-
     robot::Timer timer;
     timer.next_execution = std::chrono::steady_clock::now();
     myactuator_rmd::Driver driver("can0");
@@ -62,8 +59,8 @@ int main()
         previousShaft[i] = buf.shaft_angle;
         vel_buffer[i] = 0;
         shaftChange[i] = 0;
-        sleep(MOTORINIT_TIME);
     }
+    sleep(MOTORINIT_TIME);
 
     setSHM_ANGLE.SHM_READ(ang_buffer);
 
@@ -79,7 +76,7 @@ int main()
         
             for(int iter =0; iter < ROBOT_MEM_SIZE; iter++)
             {
-
+                pid_buffer[iter] = std::min(myactuator_rmd::max_pid_current, std::max(pid_buffer[iter] , -myactuator_rmd::max_pid_current));
                 sum_buffer[iter] = std::min(myactuator_rmd::max_current, std::max(pid_buffer[iter] + grav_buffer[iter] , -myactuator_rmd::max_current));
                 if(iter == 0 || iter == 1){
                     buf_feed[iter] = driver.sendTorqueSetpoint(iter+1,-sum_buffer[iter]);
@@ -120,14 +117,15 @@ int main()
                 }
 
 
-        printf("Sum buffer : %f %f %f\n", sum_buffer[0],sum_buffer[1],sum_buffer[2] );
-        printf("GRAV buffer : %f %f %f\n", grav_buffer[0],grav_buffer[1],grav_buffer[2] );
-        printf("PID buffer : %f %f %f\n", pid_buffer[0],pid_buffer[1],pid_buffer[2] );
+
 
         setSHM_ANGLE.SHM_WRITE(ang_buffer);
         setSHM_VEL.SHM_WRITE(vel_buffer);
 
         if(iteration %300 ==0){
+            printf("Sum buffer : %f %f %f\n", sum_buffer[0],sum_buffer[1],sum_buffer[2] );
+            printf("GRAV buffer : %f %f %f\n", grav_buffer[0],grav_buffer[1],grav_buffer[2] );
+            printf("PID buffer : %f %f %f\n", pid_buffer[0],pid_buffer[1],pid_buffer[2] );
             printf("Current Angle : %f , %f, %f \n", ang_buffer[0], ang_buffer[1],ang_buffer[2]);
             printf("Current Joint Velocities : %f %f %f \n", vel_buffer[0] , vel_buffer[1] , vel_buffer[2] );
         }
@@ -144,4 +142,5 @@ void signalHandler(int signum)
     getSHM_PID.SHM_FREE();
     getSHM_GRAV.SHM_FREE();
     setSHM_ANGLE.SHM_FREE();
+    exit(EXIT_SUCCESS);
 }

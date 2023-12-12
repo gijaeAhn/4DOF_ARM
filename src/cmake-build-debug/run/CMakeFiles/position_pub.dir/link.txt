@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/position_pub.dir/src/set_position.cc.o -o ../bin/position_pub 

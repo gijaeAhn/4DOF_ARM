@@ -32,12 +32,13 @@ int main()
                               .buildJoint(motor3)
                               .build());
     //Setting Init Condition
-    robot::robotPositionController test_posControl(3,3,0.3, &test_robot);
+    robot::robotPositionController test_posControl(4,0,0.4, &test_robot);
 //    robot::robotPositionController test_posControl(0,0,0, &test_robot);
     robot::robotGravityCompensation test_grav(&test_robot);
     std::vector<float> init_pose = {0,-84.875443,-159.401627};
 
     test_robot.setJoint(init_pose);
+    test_posControl.setpoint_ = init_pose;
 
 
     //Run Threads
@@ -46,11 +47,9 @@ int main()
     std::thread GRAVrun(&robot::robotGravityCompensation::GCOMPrun,&test_grav);
 
     sleep(MOTORINIT_TIME);
-    sleep(MOTORINIT_TIME);
+
 
 //     Control Position
-    std::vector<double> setpoint = {0, 0 , -90};
-    test_posControl.setpoint_ = setpoint;
     test_posControl.PIDcontrol();
 
 
